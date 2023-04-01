@@ -1,15 +1,16 @@
-from time import time
+import time
+
 from kivy.app import App
-from kivy.lang import Builder
-from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
 from kivy.properties import StringProperty
-from utils.helpers.formatters import timesign
-from uix.utility.templates.layouts import Layouts
-from uix.utility.displays.message import MessageUI
-from uix.utility.templates.textinputs import InputFieldInterface
+from kivy.lang import Builder
+from kivy.uix.label import Label
 
+from ...helpers.serializers import signed_timestamp
+from ..templates.layouts import Layouts
+from ..displays.message import MessageUI
+from ..templates.textinputs import InputFieldInterface
 
 Builder.load_string("""
 <Room>:
@@ -57,12 +58,10 @@ Builder.load_string("""
         focus_background_color: [0, 1, 0, .1]
 """)
 
-
 class Room(Screen):
 
     def get_display(self):
         return self.ids.display
-
 
 class ChatRoom(BoxLayout):
     active_room = StringProperty('@@default Room')
@@ -86,14 +85,14 @@ class ChatRoom(BoxLayout):
         self.active_room = new_name
 
     def map_message(self, message: str):
-        timestamp = time()
+        timestamp = time.time()
         receiver = self.active_room
 
         json_format = {
             'from_': '@Me',
             'msg_': message,
             'route': '/message',
-            'time_': timesign(timestamp)
+            'time_': signed_timestamp(timestamp)
         }
         self.what_room(receiver).add_widget(
             MessageUI(content=json_format)
@@ -104,10 +103,8 @@ class ChatRoom(BoxLayout):
         json_format['to_'] = receiver.replace('@@All Members', '').strip('@')
         App.get_running_app().submit_message(json_format)
 
-
 class RoomHeader(Label, Layouts):
     background_color = [.2, 1, .2, 1]
-
 
 class MessageInput(InputFieldInterface):
 

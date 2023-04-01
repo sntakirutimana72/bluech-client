@@ -2,12 +2,10 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.animation import Animation
 from kivy.properties import ObjectProperty
-from uix.utility.templates.layouts import BLayout
-from uix.utility.templates.loading import Loading
-from uix.utility.templates.headbars import HeadBarInterface
-from uix.utility.templates.buttons import BTextInterface  # verified
-from uix.utility.templates.textinputs import InputFieldInterface  # verified
 
+from ..templates.layouts import BLayout
+from ..templates.loading import Loading
+from ..templates.headbars import HeadBarInterface
 
 Builder.load_string("""
 <FieldSticker@Label>:
@@ -67,7 +65,6 @@ Builder.load_string("""
             size_hint_y: None
             height: '25dp'
 """)
-
 
 class ConnectTerminal(BLayout):
     background_color = [0, 0, 1, .2]
@@ -138,7 +135,6 @@ class ConnectTerminal(BLayout):
     def reset(self):
         self.launcher.disabled = False
         self.launcher = None
-
 
 class ConnectHBInterface(HeadBarInterface):
     title = 'Connect Terminal'

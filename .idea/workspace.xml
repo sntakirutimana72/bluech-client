@@ -1,45 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update the README.md file">
-      <change afterPath="$PROJECT_DIR$/bluech.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/configurer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/db_connect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/envs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/formatters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/skt_connect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/validators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loggers/elogger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loggers/ilogger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocols/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocols/startup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/dashboard/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/dashboard/dashboard.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/dashboard/dashboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/alerts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/connect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/message.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/personnels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/rooms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/behaviors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/buttons.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/headbars.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/layouts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/loading.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/searchengine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/textinputs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workers/pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workers/updater.py" afterDir="false" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Create app base skeleton stage 1">
+      <change afterPath="$PROJECT_DIR$/src/views/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/configurer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/cfg_getter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocols/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/startup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/dashboard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/dashboard/dashboard.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/dashboard/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/alerts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/personnels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/personnel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/rooms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/behaviors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/behaviors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/headbars.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/headbars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/layouts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/layouts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/loading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/searchengine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/textinputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/textinputs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/workers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,19 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/GitHub/Projects/bluech-client",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Projects/bluech-client&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\Projects\bluech-client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Projects\bluech-client\src\views" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\helpers" />
       <recent name="D:\GitHub\Projects\bluech-client\src" />
       <recent name="D:\GitHub\Projects\bluech-client" />
       <recent name="D:\GitHub\Projects\bluech-client\utils" />
@@ -129,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680300454402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Create app base skeleton stage 1">
+      <created>1680316411505</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680316411505</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +147,7 @@
     <MESSAGE value="Add base dependencies" />
     <MESSAGE value="Add primary configurations for editor, git &amp; linter" />
     <MESSAGE value="Update the README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the README.md file" />
+    <MESSAGE value="Create app base skeleton stage 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create app base skeleton stage 1" />
   </component>
 </project>

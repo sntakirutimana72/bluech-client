@@ -1,8 +1,9 @@
 from kivy.lang import Builder
 from kivy.uix.label import Label
-from uix.utility.templates.layouts import Layouts, BLayout
-from uix.utility.templates.behaviors import Clicking, Hovering
 from kivy.properties import ListProperty, StringProperty, NumericProperty, BooleanProperty
+
+from .layouts import Layouts, BLayout
+from .behaviors import Clicking, Hovering
 
 Builder.load_string("""
 <Interface>:
@@ -53,7 +54,6 @@ Builder.load_string("""
                     self.right - dp(4), self.center_y]
 """)
 
-
 class Interface(BLayout, Clicking, Hovering):
     cover = ListProperty([0, 0, .15])
     background_color = ListProperty([0, 0, 1, .5])
@@ -71,7 +71,6 @@ class Interface(BLayout, Clicking, Hovering):
     def on_release(self):
         pass
 
-
 class BTextInterface(Interface):
     text = StringProperty('')
     padder = ListProperty([0, 0])
@@ -88,14 +87,12 @@ class BTextInterface(Interface):
     class TextLayout(Label, Layouts):
         pass
 
-
 class BToggleTextInterface(BTextInterface):
     __toggled__ = None
 
     @classmethod
     def _toggle(cls, instance):
         pass
-
 
 class HBInterface(Interface):
     toggle_graffiti = NumericProperty(0)
@@ -109,19 +106,16 @@ class HBInterface(Interface):
     def on_leave(self):
         pass
 
-
 class HBResizeInterface(HBInterface):
     angle = NumericProperty(0)
 
     class RCGraffitiLayout(Layouts):
         pass
 
-
 class HBMinimizeInterface(HBInterface):
 
     class MGraffitiLayout(Layouts):
         pass
-
 
 class HBCloseInterface(HBResizeInterface):
     angle = 45

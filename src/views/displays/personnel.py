@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivy.uix.label import Label
-from uix.utility.templates.layouts import BLayout, Layouts
 
+from ..templates.layouts import BLayout, Layouts
 
 Builder.load_string("""
 <ReposHeader>:
@@ -45,13 +45,11 @@ Builder.load_string("""
                 height: max(self.parent.height, self.minimum_height)
 """)
 
-
 class PersonnelRepos(BLayout):
     background_color = [0, 0, .1, 1]
 
     def to_whom(self):
         return self.ids.personnel
-
 
 class ReposHeader(Label, Layouts):
     background_color = [.4, 0, .3, 1]

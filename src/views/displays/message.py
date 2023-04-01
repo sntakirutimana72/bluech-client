@@ -1,7 +1,7 @@
 from kivy.lang import Builder
-from uix.utility.templates.layouts import BLayout
 from kivy.properties import DictProperty, ListProperty, StringProperty
 
+from ..templates.layouts import BLayout
 
 Builder.load_string("""
 <IdentificationUI@Label>:
@@ -33,7 +33,6 @@ Builder.load_string("""
         text: root.content['time_']
         halign: 'left' if root.halign == 'right' else 'right'
 """)
-
 
 class MessageUI(BLayout):
     content = DictProperty({'from_': '', 'msg_': '', 'time_': '', 'to_': ''})

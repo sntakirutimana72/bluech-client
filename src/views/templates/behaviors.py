@@ -3,7 +3,6 @@ from kivy.core.window import Window
 from pyautogui import position as pypos
 from kivy.properties import OptionProperty, BooleanProperty
 
-
 class Hovering(object):
     hovered = BooleanProperty(False)
 

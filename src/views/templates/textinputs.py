@@ -1,9 +1,9 @@
 from kivy.lang import Builder
-from kivy.uix.textinput import TextInput
-from uix.utility.templates.layouts import BLayout
-from uix.utility.templates.behaviors import Clicking
 from kivy.properties import BooleanProperty, NumericProperty, StringProperty, ListProperty, ObjectProperty
+from kivy.uix.textinput import TextInput
 
+from .layouts import BLayout
+from .behaviors import Clicking
 
 Builder.load_string("""
 <TogglePassword>:
@@ -51,7 +51,6 @@ Builder.load_string("""
         disabled: True
 """)
 
-
 class InputInterface(TextInput):
 
     def on_text(self, *largs):
@@ -59,7 +58,6 @@ class InputInterface(TextInput):
 
     def on_focus(self, *largs):
         self.parent.parent.dispatch('on_focus', *largs)
-
 
 class InputFieldInterface(BLayout):
     placeholder = StringProperty('')
@@ -91,13 +89,11 @@ class InputFieldInterface(BLayout):
             self.focus_background_color, self.background_color
         ]
 
-
 class TogglePassword(Clicking):
     pace = NumericProperty(5)
 
     def on_press(self):
         self.parent.is_password = not self.parent.is_password
-
 
 class PasswordFieldInterface(InputFieldInterface):
     toggle = ObjectProperty(None)

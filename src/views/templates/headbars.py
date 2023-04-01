@@ -1,13 +1,13 @@
+from kivy.uix.label import Label
+from kivy.uix.boxlayout import BoxLayout
+from kivy.properties import NumericProperty, StringProperty, ListProperty, OptionProperty
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.lang import Builder
-from kivy.uix.label import Label
-from kivy.uix.boxlayout import BoxLayout
-from uix.utility.templates.layouts import BLayout
-from uix.utility.templates.behaviors import Dragging, Hovering
-from uix.utility.templates.buttons import BTextInterface  # verified
-from kivy.properties import NumericProperty, StringProperty, ListProperty, OptionProperty
 
+from .layouts import BLayout
+from .behaviors import Dragging, Hovering
+from .buttons import BTextInterface  # verified
 
 Builder.load_string("""
 <TitleInterface>:
@@ -58,14 +58,11 @@ Builder.load_string("""
         disable_controls: root.disable_controls
 """)
 
-
 class TitleInterface(Label):
     pass
 
-
 class OtherControls(BLayout):
     pass
-
 
 class InterfaceControls(BoxLayout, Hovering):
     toggle_graffiti = NumericProperty(.5)
@@ -92,7 +89,6 @@ class InterfaceControls(BoxLayout, Hovering):
         elif disabler in ['&mi', 'mi&ri']:
             self.ids.minimize.disabled = True
 
-
 class HeadBarInterface(BLayout, Dragging):
     logo_name = StringProperty('')
     title = StringProperty('SYAI BChatter')
@@ -115,7 +111,6 @@ class HeadBarInterface(BLayout, Dragging):
     def on_minimize(self):
         pass
 
-
 class HeadBarAppInterface(HeadBarInterface):
     draggable_obj = 'app'
 
@@ -133,21 +128,21 @@ class HeadBarAppInterface(HeadBarInterface):
 
                 def activate(self):
                     self.cover = [.1, .6, .1]
-                    self.bind(on_press=app_root.open_connectTerminal)
+                    # self.bind(on_press=app_root.open_connectTerminal)
 
                 def deactivate(self):
                     self.cover = [0, 0, .15]
-                    self.unbind(on_press=app_root.open_connectTerminal)
+                    # self.unbind(on_press=app_root.open_connectTerminal)
 
             class DisconnectInterface(BTextInterface):
 
                 def activate(self):
                     self.cover = [1, .2, .2]
-                    self.bind(on_press=app_root.disconnect)
+                    # self.bind(on_press=app_root.disconnect)
 
                 def deactivate(self):
                     self.cover = [.2, .1, .1]
-                    self.unbind(on_press=app_root.disconnect)
+                    # self.unbind(on_press=app_root.disconnect)
 
             connect_interface = ConnectInterface(
                 size_hint_x=None, width='70dp', background_color=[0, 0, 0, 0],

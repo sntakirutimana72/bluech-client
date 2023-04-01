@@ -4,7 +4,6 @@ from kivy.lang import Builder
 from kivy.uix.widget import Widget
 from kivy.properties import NumericProperty, ListProperty, ObjectProperty
 
-
 Builder.load_string("""
 <Loading>:
     canvas.before:
@@ -32,7 +31,6 @@ Builder.load_string("""
     width: self.height
 """
 )
-
 
 class Loading(Widget):
     pace = NumericProperty(1.5)

@@ -6,7 +6,6 @@ from kivy.uix.scrollview import ScrollView
 from kivy.effects.opacityscroll import OpacityScrollEffect
 from kivy.properties import ListProperty, NumericProperty, ObjectProperty
 
-
 Builder.load_string("""
 <Layouts>:
     canvas.before:
@@ -37,7 +36,6 @@ Builder.load_string("""
             points: [self.x, self.top, self.right, self.top]
 """)
 
-
 class Layouts(Widget):
     border_width = NumericProperty(1)
     hover_background_color = ListProperty(None)
@@ -48,17 +46,14 @@ class Layouts(Widget):
     left_border_color = ListProperty([0, 0, 0, 0])
     right_border_color = ListProperty([0, 0, 0, 0])
 
-
 class ScrollingLayout(ScrollView):
     bar_width = NumericProperty(5)
     bar_color = ListProperty([.3, .7, .5, .2])
     effect_cls = ObjectProperty(OpacityScrollEffect)
     bar_inactive_color = ListProperty([.3, .7, .5, .2])
 
-
 class BLayout(BoxLayout, Layouts):
     pass
-
 
 class GLayout(GridLayout, Layouts):
     pass
