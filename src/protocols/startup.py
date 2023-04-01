@@ -1,9 +1,11 @@
+import pyautogui as gui
+
 from kivy.config import Config
-from pyautogui import size as pysize
-from utils.helpers.configurer import config
+
+from ..helpers.cfg_getter import cfg_getter
 
 def routine_002():
-    width, height = pysize()                  # System Size
+    width, height = gui.size()                  # System Size
     ration_w = int(width * .75)
     ration_h = int(height * .75)
     left = (width - ration_w) // 2        # X-axis
@@ -17,5 +19,5 @@ def routine_002():
 
 def routine_001():
     """ configuring window from configuration file & :function:routine_002"""
-    for option, _ in (config('startup') + routine_002()):
+    for option, _ in (cfg_getter('startup') + routine_002()):
         Config.set('graphics', option, _)
