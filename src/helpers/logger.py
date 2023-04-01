@@ -1,28 +1,32 @@
-from os import path
-from datetime import datetime
-from utils.helpers.envs import res_dir
-from logging import basicConfig, DEBUG, getLogger
+import datetime as dt
+import logging
 
-logger = None
+from ..settings import BASE_DIR
 
-def __setup__():
-    global logger
+class Logger:
+    logger: logging.Logger
 
-    logfile_name = datetime.now().strftime('%B-%Y')
-    basicConfig(filename=path.join(res_dir(), 'logs', logfile_name + '.log'),
-                format='%(asctime)s :: %(levelname)s :: %(name)s :: %(message)s')
-    logger = getLogger('syai-blue-chat')
-    logger.setLevel(DEBUG)
+    @classmethod
+    def setup_logger(cls):
+        logfile_name = dt.datetime.now().strftime('%B-%Y')
+        logging.basicConfig(
+            filename=BASE_DIR.joinpath('res', 'logs', f'{logfile_name}.log'),
+            format='%(asctime)s :: %(levelname)s :: %(name)s :: %(message)s')
+        cls.logger = logging.getLogger('bluech-client')
+        cls.logger.setLevel(logging.DEBUG)
 
-def logging(message, what_: str = 'e'):
-    if what_ == 'i':
-        logger.info(repr(message))
-    elif what_ == 'c':
-        logger.critical(repr(message))
-    elif what_ == 'w':
-        logger.warning(repr(message))
-    else:
-        logger.error(repr(message))
+    @classmethod
+    def info(cls, payload):
+        cls.logger.info(str(payload))
 
+    @classmethod
+    def critical(cls, payload):
+        cls.logger.critical(str(payload))
 
-__setup__()
+    @classmethod
+    def warning(cls, payload):
+        cls.logger.warning(str(payload))
+
+    @classmethod
+    def error(cls, payload):
+        cls.logger.error(str(payload))
