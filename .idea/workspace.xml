@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pylintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update the README.md file">
+      <change afterPath="$PROJECT_DIR$/bluech.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/configurer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/db_connect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/envs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/formatters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/skt_connect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/validators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loggers/elogger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loggers/ilogger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocols/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocols/startup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/dashboard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/dashboard/dashboard.kv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/dashboard/dashboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/alerts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/connect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/personnels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/displays/rooms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/behaviors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/buttons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/headbars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/layouts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/loading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/searchengine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/uix/utility/templates/textinputs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workers/pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workers/updater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,6 +60,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Nm0C4HrwYmYq4ARPIP1RafXXS7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +79,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\Projects\bluech-client" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Projects\bluech-client\src" />
+      <recent name="D:\GitHub\Projects\bluech-client" />
+      <recent name="D:\GitHub\Projects\bluech-client\utils" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,6 +94,42 @@
       <option name="presentableId" value="Default" />
       <updated>1680253819654</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update workspace dictionary">
+      <created>1680300348330</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680300348330</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update workspace.xml from .idea">
+      <created>1680300374494</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680300374494</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add base dependencies">
+      <created>1680300410332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680300410332</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add primary configurations for editor, git &amp; linter">
+      <created>1680300438235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680300438235</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update the README.md file">
+      <created>1680300454402</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680300454402</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -58,5 +142,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update workspace dictionary" />
+    <MESSAGE value="Update workspace.xml from .idea" />
+    <MESSAGE value="Add base dependencies" />
+    <MESSAGE value="Add primary configurations for editor, git &amp; linter" />
+    <MESSAGE value="Update the README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the README.md file" />
   </component>
 </project>
