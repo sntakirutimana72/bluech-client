@@ -47,7 +47,20 @@ class ConfiguratorUnit(SessionUnit):
         while True:
             await io.sleep(5)
 
-class ProcessorUnit(ConfiguratorUnit):
+class QueuePosterUnit(ConfiguratorUnit):
+    def post_payload(self, **kwargs):
+        loop = self.loop
+        while loop is None:
+            loop = self.loop
+        loop.call_soon_threadsafe(self.threadsafe_poster, kwargs)
+
+    def threadsafe_poster(self, payload: dict[str, tip.Any]):
+        self.loop.create_task(self.poster(**payload))
+
+    async def poster(self, **kwargs):
+        await self.OUTS_Q.put(kwargs)
+
+class ProcessorUnit(QueuePosterUnit):
     async def establish_connection(self):
         is_connected = None
         while is_connected is None:
