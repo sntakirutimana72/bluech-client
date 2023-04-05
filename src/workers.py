@@ -74,7 +74,26 @@ class ProcessorUnit(QueuePosterUnit):
             self.writer = writer
             io.create_task(self.signin())
 
-class CoreWorker(ConfiguratorUnit):
+class Worker(ConfiguratorUnit):
+    __events__ = (
+        'on_connected',
+        'on_disconnected',
+        'on_response',
+        'on_status'
+    )
+
+    def on_connected(self, **kwargs):
+        ...
+
+    def on_disconnected(self, **kwargs):
+        ...
+
+    def on_response(self, **kwargs):
+        ...
+
+    def on_status(self, **kwargs):
+        ...
+
     def __init__(self):
         super().__init__()
         self.engine = rd.Thread(target=self.configure, daemon=True)
