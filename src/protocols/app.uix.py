@@ -1,7 +1,7 @@
+__name__ = 'bluech_client.protocols.startup.uix'
+
 import sys
 import os
-
-from ..settings import DYNAMIC_IMPORTS
 
 def configure_framework_logging_system():
     """
@@ -59,6 +59,3 @@ def configure_app_window_on_startup():
     except:
         Logger.error()
         sys.exit(1)
-
-# Purposely for dynamic import lookup
-__name__ = DYNAMIC_IMPORTS['app.uix']
