@@ -1,3 +1,44 @@
+#: import icon kivy.garden.fonts.icon
+#: import rgba kivy.utils.rgba
+
+<IndexPage>:
+    FloatLayout:
+        GridLayout:
+            cols: 1
+            spacing: '10sp'
+            padding: '10sp'
+            center_y: self.parent.center_y
+            size_hint_y: None
+            height: self.minimum_height
+
+            Label:
+                text: '[size=68][color=#a5ff00]bluech[/color][/size] [i]Client[/i]'
+                font_size: '42sp'
+                markup: True
+                size_hint_y: None
+                height: self.texture_size[1]
+            Label:
+                canvas.before:
+                    PushMatrix
+                    Rotate:
+                        origin: self.center
+                        angle: self.animation_angle
+                    Color:
+                        rgba: rgba('#0e1574ff')
+                    Ellipse:
+                        pos: self.pos
+                        size: self.size
+                canvas.after:
+                    PopMatrix
+
+                text: '[color=#c8c8c8]{0}[/color]'.format(root.stat_message)
+                font_size: '13sp'
+                markup: True
+                size_hint_y: None
+                font_name: 'Roboto'
+                height: self.texture_size[1]
+
+
 <Dashboard>:
     manager: pages_manager.__self__
 
@@ -11,3 +52,6 @@
         background_color: 0, 0, .15, 1
         padding: '5sp'
         spacing: '5sp'
+
+        IndexPage:
+            app: app
