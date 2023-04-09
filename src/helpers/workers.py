@@ -5,8 +5,11 @@ import typing as tip
 from kivy.clock import mainthread
 from kivy.event import EventDispatcher
 
+from .logger import Logger
+
 class Base(EventDispatcher):
     loop: io.AbstractEventLoop
+    is_connected = None
     reader: io.StreamReader | None
     writer: io.StreamWriter | None
 
@@ -42,10 +45,28 @@ class ConfiguratorUnit(SessionUnit):
         self.loop.create_task(self.pulse())
         self.loop.run_forever()
 
-    @staticmethod
-    async def pulse():
+    async def establish_connection(self):
+        try:
+            Logger.info('Attempting to establish connection with server')
+            self.delegate('on_status', status='Connecting')
+            await io.sleep(2.25)
+            reader, writer = await io.open_connection(host='localhost', port=8090)
+        except:
+            Logger.error()
+            await io.sleep(2.25)
+            self.delegate('on_status', status='Offline')
+        else:
+            Logger.info('Connection with server established [success]')
+            self.reader = reader
+            self.writer = writer
+            self.is_connected = True
+            self.delegate('on_status', status='Online')
+
+    async def pulse(self):
         while True:
-            await io.sleep(5)
+            if self.is_connected is None:
+                await self.establish_connection()
+            await io.sleep(10)
 
 class QueuePosterUnit(ConfiguratorUnit):
     def post_payload(self, **kwargs):
@@ -61,18 +82,7 @@ class QueuePosterUnit(ConfiguratorUnit):
         await self.OUTS_Q.put(kwargs)
 
 class ProcessorUnit(QueuePosterUnit):
-    async def establish_connection(self):
-        is_connected = None
-        while is_connected is None:
-            try:
-                reader, writer = await io.open_connection()
-            except:
-                await io.sleep(10)
-                continue
-            is_connected = True
-            self.reader = reader
-            self.writer = writer
-            io.create_task(self.signin())
+    ...
 
 class Worker(ConfiguratorUnit):
     __events__ = (
