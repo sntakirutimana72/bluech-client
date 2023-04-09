@@ -9,7 +9,7 @@ class Logger:
 
     @classmethod
     def setup_logger(cls):
-        logfile_name = dt.datetime.now().strftime('%B-%Y')
+        logfile_name = dt.datetime.now().strftime('%m_%Y')
         logging.basicConfig(
             filename=BASE_DIR.joinpath('res', 'logs', f'{logfile_name}.log'),
             format='%(asctime)s :: %(levelname)s :: %(name)s :: %(message)s')
