@@ -2,6 +2,7 @@ from kivy.properties import ColorProperty, StringProperty, ObjectProperty, Numer
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.widget import Widget
 from kivy.clock import Clock
+from kivy.utils import rgba
 
 from .helpers.workers import Worker
 from .templates.shortcuts.directives import include
@@ -33,40 +34,33 @@ class IndexPage(Page):
     __events__ = 'on_status',
 
     name = StringProperty('index_page')
-    stat_message = StringProperty('Offline')
-    motion_trigger = ObjectProperty(allownone=True)
-    animation_counter = NumericProperty(0)
+    animation = ObjectProperty(allownone=True)
+    animation_angle = NumericProperty(0)
+    needle_normal_color = ColorProperty(rgba('#a5ff00ff'))
+    needle_idle_color = ColorProperty(rgba('#00000000'))
+    needle_color = ColorProperty(rgba('#00000000'))
+    needle_cover_color = ColorProperty(rgba('#0e1574ff'))
+    needle_trim = NumericProperty(2)
 
     def schedule_animation(self):
-        self.motion_trigger = Clock.schedule_interval(lambda _: self.animate_motion(), 1/1.25)
+        self.animation = Clock.schedule_interval(lambda _: self.animate_motion(), 1/50)
 
     def stop_animation(self):
-        if self.motion_trigger:
-            trigger = self.motion_trigger
-            self.motion_trigger = None
-            trigger.cancel()
+        if pulse := self.animation:
+            pulse.cancel()
+            self.animation = None
+            self.needle_color = self.needle_idle_color
 
-    def on_parent(self, *args):
-        if args[1] is None:
+    def on_parent(self, _, parent):
+        if parent is None:
             self.stop_animation()
 
     def on_status(self, *_, **kwargs):
-        status = kwargs['status']
-        if status == 'Connecting':
-            self.stat_message = status
-            self.schedule_animation()
-        else:
-            self.stop_animation()
-            self.stat_message = status
+        self.schedule_animation() if kwargs['status'] == 'Connecting' else self.stop_animation()
 
     def animate_motion(self):
-        counter = self.animation_counter + 1
-        if counter > 3:
-            counter = 0
-        # noinspection PyArgumentList
-        stat_message = self.stat_message.replace('.', '')
-        self.stat_message = f"{stat_message}{'.' * counter}"
-        self.animation_counter = counter
+        self.needle_color = self.needle_normal_color
+        self.animation_angle -= 10
 
 class PagesManager(ScreenManager):
     ...
@@ -77,7 +71,7 @@ class Dashboard(View, BLayout):
         'on_disconnected',
         'on_response',
     )
-    background_color = ColorProperty([0, 0, 1, .4])
+    background_color = ColorProperty(rgba('#0e1574ff'))
     manager: PagesManager = ObjectProperty()
 
     def on_connected(self, **kwargs):

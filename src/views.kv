@@ -1,43 +1,43 @@
-#: import icon kivy.garden.fonts.icon
-#: import rgba kivy.utils.rgba
-
 <IndexPage>:
     FloatLayout:
-        GridLayout:
-            cols: 1
-            spacing: '10sp'
+        BoxLayout:
             padding: '10sp'
-            center_y: self.parent.center_y
-            size_hint_y: None
-            height: self.minimum_height
+            orientation: 'vertical'
 
-            Label:
-                text: '[size=68][color=#a5ff00]bluech[/color][/size] [i]Client[/i]'
-                font_size: '42sp'
-                markup: True
-                size_hint_y: None
-                height: self.texture_size[1]
-            Label:
-                canvas.before:
-                    PushMatrix
-                    Rotate:
-                        origin: self.center
-                        angle: self.animation_angle
-                    Color:
-                        rgba: rgba('#0e1574ff')
-                    Ellipse:
-                        pos: self.pos
-                        size: self.size
-                canvas.after:
-                    PopMatrix
+            FloatLayout:
+                Label:
+                    text: '[size=68][color=#a5ff00]bluech[/color][/size] [i]Client[/i]'
+                    font_size: '42sp'
+                    markup: True
+                    pos: self.parent.pos
+                    size_hint_y: None
+                    height: self.texture_size[1]
+            FloatLayout:
+                Label:
+                    canvas.before:
+                        PushMatrix
+                        Rotate:
+                            origin: self.center
+                            angle: root.animation_angle
+                        Color:
+                            rgba: root.needle_color
+                        Ellipse:
+                            pos: self.pos
+                            size: self.size
+                            angle_start: 0
+                            angle_end: 135
+                    canvas:
+                        Color:
+                            rgba: root.needle_cover_color
+                        Ellipse:
+                            pos: self.x + root.needle_trim, self.y + root.needle_trim
+                            size: self.width - root.needle_trim * 2, self.height - root.needle_trim * 2
+                    canvas.after:
+                        PopMatrix
 
-                text: '[color=#c8c8c8]{0}[/color]'.format(root.stat_message)
-                font_size: '13sp'
-                markup: True
-                size_hint_y: None
-                font_name: 'Roboto'
-                height: self.texture_size[1]
-
+                    size_hint: None, None
+                    center: self.parent.center_x, self.parent.top - self.height - dp(40)
+                    size: dp(26), dp(26)
 
 <Dashboard>:
     manager: pages_manager.__self__
