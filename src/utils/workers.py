@@ -48,25 +48,25 @@ class ConfiguratorUnit(SessionUnit):
     async def establish_connection(self):
         try:
             Logger.info('Attempting to establish connection with server')
-            self.delegate('on_status', status='Connecting')
-            await io.sleep(2.25)
+            self.delegate('on_status', status='connecting')
+            await io.sleep(1.75)
             reader, writer = await io.open_connection(host='localhost', port=8090)
         except:
             Logger.error()
-            await io.sleep(2.25)
-            self.delegate('on_status', status='Offline')
+            await io.sleep(1.75)
+            self.delegate('on_status', status='offline')
         else:
             Logger.info('Connection with server established [success]')
             self.reader = reader
             self.writer = writer
             self.is_connected = True
-            self.delegate('on_status', status='Online')
+            self.delegate('on_status', status='online')
 
     async def pulse(self):
         while True:
             if self.is_connected is None:
                 await self.establish_connection()
-            await io.sleep(10)
+            await io.sleep(20)
 
 class QueuePosterUnit(ConfiguratorUnit):
     def post_payload(self, **kwargs):
@@ -86,16 +86,16 @@ class ProcessorUnit(QueuePosterUnit):
 
 class Worker(ConfiguratorUnit):
     __events__ = (
-        'on_connected',
-        'on_disconnected',
+        'on_signed_in',
+        'on_signed_out',
         'on_response',
         'on_status'
     )
 
-    def on_connected(self, **kwargs):
+    def on_signed_in(self, **kwargs):
         ...
 
-    def on_disconnected(self, **kwargs):
+    def on_signed_out(self, **kwargs):
         ...
 
     def on_response(self, **kwargs):
