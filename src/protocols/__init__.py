@@ -1,4 +1,4 @@
-from ..helpers.require import require
+from ..utils.require import require
 
 uix_module = require('app.uix', ['src', 'protocols'])
 configure_framework_logging_system = uix_module.configure_framework_logging_system

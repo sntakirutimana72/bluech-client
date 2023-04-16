@@ -7,7 +7,7 @@ from kivy.properties import StringProperty
 from kivy.lang import Builder
 from kivy.uix.label import Label
 
-from ...helpers.serializers import signed_timestamp
+from ...utils.serializers import signed_timestamp
 from ..behaviors.layouts import Layouts
 from ..displays.message import MessageUI
 from ..behaviors.textinputs import InputFieldInterface

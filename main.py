@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    from src.helpers.logger import Logger
+    from src.utils.logger import Logger
     from src.protocols import (
         configure_framework_logging_system, configure_system_source_for_compiled_version,
         configure_app_window_on_startup,

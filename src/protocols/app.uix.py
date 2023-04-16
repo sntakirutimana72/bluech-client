@@ -35,8 +35,8 @@ def configure_app_window_on_startup():
 
     from kivy.config import Config
 
-    from src.helpers.cfg_getter import cfg_getter
-    from src.helpers.logger import Logger
+    from src.utils.cfg_getter import cfg_getter
+    from src.utils.logger import Logger
 
     try:
         def get_configs(*startup_configs):
