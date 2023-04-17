@@ -3,9 +3,9 @@ from kivy.lang import Builder
 from kivy.animation import Animation
 from kivy.properties import ObjectProperty
 
-from ..templates.layouts import BLayout
-from ..templates.loading import Loading
-from ..templates.headbars import HeadBarInterface
+from ..behaviors.layouts import BLayout
+from ..behaviors.loading import Loading
+from ..behaviors.headbars import HeadBarInterface
 
 Builder.load_string("""
 <FieldSticker@Label>:

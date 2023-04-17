@@ -1,5 +1,6 @@
 import datetime as dt
 import logging
+import traceback as trace
 
 from ..settings import BASE_DIR
 
@@ -8,7 +9,7 @@ class Logger:
 
     @classmethod
     def setup_logger(cls):
-        logfile_name = dt.datetime.now().strftime('%B-%Y')
+        logfile_name = dt.datetime.now().strftime('%m_%Y')
         logging.basicConfig(
             filename=BASE_DIR.joinpath('res', 'logs', f'{logfile_name}.log'),
             format='%(asctime)s :: %(levelname)s :: %(name)s :: %(message)s')
@@ -28,5 +29,7 @@ class Logger:
         cls.logger.warning(str(payload))
 
     @classmethod
-    def error(cls, payload):
+    def error(cls, payload=None):
+        if payload is None:
+            payload = trace.format_exc()
         cls.logger.error(str(payload))

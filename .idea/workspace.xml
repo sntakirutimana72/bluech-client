@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Create app base skeleton stage 1">
-      <change afterPath="$PROJECT_DIR$/src/views/app.py" afterDir="false" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/utils/directives.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/configurer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/cfg_getter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocols/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/startup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/dashboard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/dashboard/dashboard.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/dashboard/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/alerts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/personnels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/personnel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/displays/rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/displays/rooms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/behaviors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/behaviors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/buttons.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/headbars.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/headbars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/layouts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/layouts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/loading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/searchengine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uix/utility/templates/textinputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/textinputs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/workers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/cfg_getter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/cfg_getter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/require.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/require.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/workers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocols/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocols/app.uix.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/app.uix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/displays/rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/displays/rooms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/shortcuts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/shortcuts/directives.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/views.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/src/test.kv" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,7 +37,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/templates/kv/views.kv" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,7 +63,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Projects/bluech-client&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.EditorConfig&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -69,11 +71,11 @@
       <recent name="D:\GitHub\Projects\bluech-client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Projects\bluech-client\src\views" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\templates" />
       <recent name="D:\GitHub\Projects\bluech-client\src\helpers" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\templates\kv" />
       <recent name="D:\GitHub\Projects\bluech-client\src" />
-      <recent name="D:\GitHub\Projects\bluech-client" />
-      <recent name="D:\GitHub\Projects\bluech-client\utils" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -127,7 +129,147 @@
       <option name="project" value="LOCAL" />
       <updated>1680316411505</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update .editorconfig">
+      <created>1680730223936</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730223936</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Move guix elements">
+      <created>1680730300514</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730300514</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Create a dynamic import mechanism">
+      <created>1680730339192</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730339192</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactor startup protocol">
+      <created>1680730536797</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730536797</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor startup protocol">
+      <created>1680730551667</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730551667</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add :DYNAMIC_IMPORTS to settings">
+      <created>1680730592085</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730592085</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactor views dynamic and logic">
+      <created>1680730625399</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730625399</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update worker core engine">
+      <created>1680730647195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730647195</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update logger logic">
+      <created>1680730666837</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730666837</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update app :main entry file">
+      <created>1680730691431</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730691431</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Update .gitignore">
+      <created>1680730701978</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730701978</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update workspace.xml">
+      <created>1680730716467</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730716467</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Move and update workers.py">
+      <created>1681074514621</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681074514621</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactor app gui logic">
+      <created>1681074712586</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681074712586</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Rename module">
+      <created>1681074763662</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681074763662</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Rename log file naming logic">
+      <created>1681074808118</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681074808118</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Introduce kivy garden and utils.rgba">
+      <created>1681074838851</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681074838851</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add new vocabularies to project workspace.xml">
+      <created>1681074871485</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681074871485</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Perfect index page loading animation">
+      <created>1681306988910</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681306988910</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Update workspace.xml">
+      <created>1681307003609</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681307003609</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +290,24 @@
     <MESSAGE value="Add primary configurations for editor, git &amp; linter" />
     <MESSAGE value="Update the README.md file" />
     <MESSAGE value="Create app base skeleton stage 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create app base skeleton stage 1" />
+    <MESSAGE value="Update .editorconfig" />
+    <MESSAGE value="Move guix elements" />
+    <MESSAGE value="Create a dynamic import mechanism" />
+    <MESSAGE value="Refactor startup protocol" />
+    <MESSAGE value="Add :DYNAMIC_IMPORTS to settings" />
+    <MESSAGE value="Refactor views dynamic and logic" />
+    <MESSAGE value="Update worker core engine" />
+    <MESSAGE value="Update logger logic" />
+    <MESSAGE value="Update app :main entry file" />
+    <MESSAGE value="Update .gitignore" />
+    <MESSAGE value="Move and update workers.py" />
+    <MESSAGE value="Refactor app gui logic" />
+    <MESSAGE value="Rename module" />
+    <MESSAGE value="Rename log file naming logic" />
+    <MESSAGE value="Introduce kivy garden and utils.rgba" />
+    <MESSAGE value="Add new vocabularies to project workspace.xml" />
+    <MESSAGE value="Perfect index page loading animation" />
+    <MESSAGE value="Update workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
   </component>
 </project>

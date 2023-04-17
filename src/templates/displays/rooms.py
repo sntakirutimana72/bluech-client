@@ -7,10 +7,10 @@ from kivy.properties import StringProperty
 from kivy.lang import Builder
 from kivy.uix.label import Label
 
-from ...helpers.serializers import signed_timestamp
-from ..templates.layouts import Layouts
+from ...utils.serializers import signed_timestamp
+from ..behaviors.layouts import Layouts
 from ..displays.message import MessageUI
-from ..templates.textinputs import InputFieldInterface
+from ..behaviors.textinputs import InputFieldInterface
 
 Builder.load_string("""
 <Room>:

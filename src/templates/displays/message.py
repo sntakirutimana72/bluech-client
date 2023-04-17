@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivy.properties import DictProperty, ListProperty, StringProperty
 
-from ..templates.layouts import BLayout
+from ..behaviors.layouts import BLayout
 
 Builder.load_string("""
 <IdentificationUI@Label>:

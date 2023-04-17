@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivy.uix.label import Label
 
-from ..templates.layouts import BLayout, Layouts
+from ..behaviors.layouts import BLayout, Layouts
 
 Builder.load_string("""
 <ReposHeader>:

@@ -1,6 +1,8 @@
 # compiled cache files
 __pycache__
 
+*.log
+
 # databases
 *.sqlite3
 *.sqlite

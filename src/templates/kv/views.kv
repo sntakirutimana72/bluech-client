@@ -1,0 +1,67 @@
+#:import rgba kivy.utils.rgba
+#:import GLayout src.templates.behaviors.layouts.GLayout
+
+<IndexPage>:
+    animation_anchor: animation_anchor.__self__
+
+    FloatLayout:
+        BoxLayout:
+            padding: '10sp'
+            orientation: 'vertical'
+
+            FloatLayout:
+                Label:
+                    text: '[size=68][color=#a5ff00]bluech[/color][/size] [i]Client[/i]'
+                    font_size: '42sp'
+                    markup: True
+                    pos: self.parent.pos
+                    size_hint_y: None
+                    height: self.texture_size[1]
+            FloatLayout:
+                StatWidget:
+                    size_hint: None, None
+                    center: self.parent.center_x, self.parent.top - self.height
+                    size: dp(80), dp(80)
+                    id: animation_anchor
+
+
+<LogonPage>:
+    GLayout:
+        cols: 1
+        spacing: '10sp'
+        padding: '30sp', '20sp'
+        center: root.center_x, root.center_y + 60
+        size_hint: None, None
+        size: dp(300), self.minimum_height
+        background_color: rgba('#0d1874ff')
+
+        ResizableSpan:
+            font_size: '40sp'
+            text: root.title
+        TextField:
+            hint_text: 'Username | Email'
+        TextField:
+            hint_text: 'Password'
+            password: True
+        PrimaryButton:
+            text: 'Signin'
+
+
+<Dashboard>:
+    manager: pages_manager.__self__
+
+    padding: '1sp'
+    spacing: '1sp'
+    orientation: 'vertical'
+
+    PagesManager:
+        id: pages_manager
+        root: root
+
+        background_color: 0, 0, .15, 1
+        padding: '5sp'
+        spacing: '5sp'
+
+        IndexPage:
+            root: root
+            app: app
