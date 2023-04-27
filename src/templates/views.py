@@ -36,8 +36,7 @@ class Page(View, Screen):
     ...
 
 class IndexPage(Page):
-    __events__ = 'on_status',
-    __worker_events__ = __events__
+    __worker_events__ = 'on_status',
 
     animation = None
     name = 'index'
@@ -49,11 +48,11 @@ class IndexPage(Page):
             self.cancel_animation('offline')
 
     def on_status(self, *_, **kwargs):
-        stat_label = kwargs['status']
-        if stat_label == 'connecting':
+        status = kwargs['status']
+        if status == 'connecting':
             return self.create_animation()
-        self.cancel_animation(stat_label)
-        if stat_label == 'online':
+        self.cancel_animation(status)
+        if status == 'online':
             self.root.on_connection_established()
 
     def create_animation(self):
@@ -104,12 +103,11 @@ class PagesManager(ScreenManager):
             return LogonPage(**kwargs)
 
 class Dashboard(View, BLayout):
-    __events__ = (
+    __worker_events__ = (
         'on_signed_in',
         'on_signed_out',
         'on_response',
     )
-    __worker_events__ = __events__
 
     background_color = ColorProperty(rgba('#0e1574ff'))
     manager: PagesManager = ObjectProperty()
