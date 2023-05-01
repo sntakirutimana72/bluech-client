@@ -1,0 +1,69 @@
+#:import PrimaryButton src.templates.buttons.PrimaryButton
+#:import Box src.templates.layouts.Box
+
+<FormTextInput@TextField+ResizeWidget>:
+    height: dp(30)
+
+<LogonForm>:
+    username: usr.__self__
+    password: usr_pass.__self__
+    submit_btn: submit_btn.__self__
+
+    cols: 1
+    spacing: '20sp'
+    padding: '15sp', '20sp'
+    border_radius: 10, 10, 10, 10
+
+    FloatLayout:
+        size_hint_y: None
+        height: '80sp'
+        Image:
+            size_hint_x: None
+            width: self.parent.height
+            center: self.parent.center
+            source: static.image('online')
+
+    ResizableSpan:
+        font_size: '30sp'
+        padding_y: '10sp'
+        text: root.title
+        valign: 'middle'
+        halign: 'center'
+        markup: True
+    FormTextInput:
+        id: usr
+        name: 'username'
+        placeholder: 'Username | Email'
+        on_change: root.on_ssid_change(args[1])
+    FormTextInput:
+        id: usr_pass
+        name: 'password'
+        placeholder: 'Password'
+        password: True
+        on_change: root.on_password_change(args[1])
+    Box:
+        size_hint: 1, None
+        height: '30sp'
+        background_color: submit_btn.background_color
+
+        PrimaryButton:
+            id: submit_btn
+            text: 'Signin'
+            color: 'black'
+            disabled: True
+            on_press: root.pre_submit()
+        BoxLayout:
+            size_hint_x: None
+            width: self.minimum_width
+            padding: '6sp'
+    BoxLayout:
+        size_hint_y: None
+        height: '60sp'
+        spacing: '10sp'
+        padding: '6sp', 0
+
+        SepHLine:
+        Circle:
+            size_hint_x: None
+            width: '30sp'
+        SepHLine:
