@@ -15,10 +15,4 @@ Logger.info('Engage startup protocol')
 configure_app_window_on_startup()
 Logger.info('Startup protocol engaged successfully.')
 
-# ******************************************************************
-
-import pytest
-
-@pytest.fixture
-def fake_server():
-    ...
+# *********************
