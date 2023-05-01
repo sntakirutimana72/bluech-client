@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Change CRLF to LF">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Add test units for logon page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/behaviors/buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/buttons.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/behaviors/textinputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/kv/commons.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/commons.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/kv/progress_elements.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/progress_elements.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/kv/views.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/views.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/progress_elements.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/progress_elements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/supports/selectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/supports/selectors.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +324,77 @@
       <option name="project" value="LOCAL" />
       <updated>1682585957801</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Move certain design from /behaviors back in /templates">
+      <created>1682917013071</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917013071</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add logon form">
+      <created>1682917067479</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917067479</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Reformat :TextField">
+      <created>1682917105595</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917105595</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Add a RingSpin element">
+      <created>1682917123848</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917123848</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Delete old fields context file">
+      <created>1682917162211</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917162211</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Reduce and update common shared components">
+      <created>1682917199837</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917199837</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Update .gitignore">
+      <created>1682917215180</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917215180</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Add a threshold trial count while searching for an element">
+      <created>1682917280065</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917280065</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Update views">
+      <created>1682917306000</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917306000</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Add test units for logon page">
+      <created>1682917336290</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917336290</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,16 +409,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor startup protocol" />
-    <MESSAGE value="Add :DYNAMIC_IMPORTS to settings" />
-    <MESSAGE value="Refactor views dynamic and logic" />
-    <MESSAGE value="Update worker core engine" />
-    <MESSAGE value="Update logger logic" />
-    <MESSAGE value="Update app :main entry file" />
-    <MESSAGE value="Update .gitignore" />
-    <MESSAGE value="Move and update workers.py" />
-    <MESSAGE value="Refactor app gui logic" />
-    <MESSAGE value="Rename module" />
     <MESSAGE value="Rename log file naming logic" />
     <MESSAGE value="Introduce kivy garden and utils.rgba" />
     <MESSAGE value="Add new vocabularies to project workspace.xml" />
@@ -373,6 +424,16 @@
     <MESSAGE value="Add test units for index page" />
     <MESSAGE value="Eliminate __events__ attribute duplication from View" />
     <MESSAGE value="Change CRLF to LF" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change CRLF to LF" />
+    <MESSAGE value="Move certain design from /behaviors back in /templates" />
+    <MESSAGE value="Add logon form" />
+    <MESSAGE value="Reformat :TextField" />
+    <MESSAGE value="Add a RingSpin element" />
+    <MESSAGE value="Delete old fields context file" />
+    <MESSAGE value="Reduce and update common shared components" />
+    <MESSAGE value="Update .gitignore" />
+    <MESSAGE value="Add a threshold trial count while searching for an element" />
+    <MESSAGE value="Update views" />
+    <MESSAGE value="Add test units for logon page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test units for logon page" />
   </component>
 </project>

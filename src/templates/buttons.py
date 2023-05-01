@@ -1,7 +1,7 @@
 from kivy.uix.label import Label
 from kivy.properties import ListProperty, StringProperty, ColorProperty
 
-from .behaviours import Clicking, Hovering
+from .behaviors import Clicking, Hovering
 from ..utils.directives import include
 
 include(__file__)

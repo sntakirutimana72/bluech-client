@@ -4,7 +4,7 @@ from kivy.uix.widget import Widget
 from kivy.clock import Clock
 from kivy.animation import Animation
 
-from .behaviors.layouts import BLayout
+from .layouts import Box
 from .progress_elements import StatWidget
 from .forms import LogonForm
 from ..utils.workers import Worker
@@ -102,7 +102,7 @@ class PagesManager(ScreenManager):
         elif name == 'logon':
             return LogonPage(**kwargs)
 
-class Dashboard(View, BLayout):
+class Dashboard(View, Box):
     __worker_events__ = (
         'on_signed_in',
         'on_signed_out',
