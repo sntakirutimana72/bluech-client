@@ -1,12 +1,12 @@
-from kivy.properties import ColorProperty, StringProperty, ObjectProperty
+from kivy.properties import ColorProperty, ObjectProperty
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.widget import Widget
 from kivy.clock import Clock
-from kivy.utils import rgba
 from kivy.animation import Animation
 
 from .behaviors.layouts import BLayout
 from .progress_elements import StatWidget
+from .forms import LogonForm
 from ..utils.workers import Worker
 from ..utils.directives import include
 
@@ -40,7 +40,6 @@ class IndexPage(Page):
 
     animation = None
     name = 'index'
-
     animation_anchor: StatWidget = ObjectProperty()
 
     def on_parent(self, _, parent):
@@ -80,12 +79,13 @@ class IndexPage(Page):
 class LogonPage(Page, Screen):
     name = 'logon'
 
-    title = StringProperty('Logon')
+    def on_submit(self, form: LogonForm):
+        ...
 
 class PagesManager(ScreenManager):
     root: View = ObjectProperty()
 
-    def forget_and_switch_page(self, page: str | Page):
+    def forget_and_switch(self, page: str | Page):
         if isinstance(page, str):
             page = self.get_new_page(page)
         forgotten_page = self.current_screen
@@ -108,18 +108,17 @@ class Dashboard(View, BLayout):
         'on_signed_out',
         'on_response',
     )
-
-    background_color = ColorProperty(rgba('#0e1574ff'))
     manager: PagesManager = ObjectProperty()
+    background_color = ColorProperty('#0e1574ff')
 
     def on_connection_established(self):
-        self.manager.forget_and_switch_page('logon')
+        self.manager.forget_and_switch('logon')
 
     def on_signed_in(self, **kwargs):
         ...
 
     def on_signed_out(self, **kwargs):
-        self.manager.forget_and_switch_page('index')
+        self.manager.forget_and_switch('index')
 
     def on_response(self, **kwargs):
         ...
