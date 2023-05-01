@@ -1,6 +1,3 @@
-#:import rgba kivy.utils.rgba
-#:import static src.utils.directives.StaticSRCLoader
-
 <StatWidget>:
     canvas.before:
         PushMatrix
@@ -40,3 +37,26 @@
             pos: self.x + self.ring_trim + self.trim_extra, self.y + self.ring_trim + self.trim_extra
             size: self.width - self.trim_extra * 2 - self.ring_trim * 2, self.height - self.trim_extra * 2 - self.ring_trim * 2
 
+<RingSpin>:
+    canvas.before:
+        PushMatrix
+        Rotate:
+            origin: self.center
+            angle: self.angle
+        Color:
+            rgba: self.ring_color
+        Ellipse:
+            pos: self.pos
+            size: self.size
+            angle_start: 0
+            angle_end: 180
+    canvas:
+        Color:
+            rgba: self.cover_color
+        Ellipse:
+            pos: self.x + 2, self.y + 2
+            size: self.width - 4, self.height - 4
+        PopMatrix
+
+    size_hint_x: None
+    width: self.height
