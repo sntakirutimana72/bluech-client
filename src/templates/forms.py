@@ -24,12 +24,12 @@ class LogonForm(Grid):
         ring_spin.spin()
         self.dispatch('on_submit')
 
-    def post_submit(self, is_disabled=True):
+    def post_submit(self, **kwargs):
         sibling = self.submit_btn.parent.children[0]
         ring_spin: RingSpin = sibling.children[0]
         ring_spin.halt()
         sibling.remove_widget(ring_spin)
-        self.flag_form(is_disabled)
+        self.flag_form(kwargs['is_disabled'])
 
     def on_submit(self):
         """Triggered when the form is submitted."""
