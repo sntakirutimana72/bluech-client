@@ -1,5 +1,5 @@
 <IndexPage>:
-    animation_anchor: animation_anchor.__self__
+    anchor: anim_anchor.__self__
 
     FloatLayout:
         BoxLayout:
@@ -19,7 +19,7 @@
                     size_hint: None, None
                     center: self.parent.center_x, self.parent.top - self.height
                     size: dp(80), dp(80)
-                    id: animation_anchor
+                    id: anim_anchor
 
 
 <LogonPage>:
@@ -30,7 +30,7 @@
         center: root.center
         size_hint: None, None
         size: dp(260), self.minimum_height
-        on_submit: root.on_submit(args[0])
+        on_submit: root.on_submit()
 
 
 <Dashboard>:
