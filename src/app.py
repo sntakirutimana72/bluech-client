@@ -8,10 +8,7 @@ from .utils.workers import Worker
 
 class BluechClientApp(App):
     worker: Worker = ObjectProperty()
-    user = DictProperty({
-        'is_authenticated': False,
-        'is_anonymous': True
-    })
+    user = DictProperty({'is_anonymous': True})
 
     def build(self):
         include(COMMON_KV_TEMPLATES)
@@ -23,13 +20,9 @@ class BluechClientApp(App):
     def on_start(self):
         self.worker.ignite()
 
-    def on_signed_in(self, **user):
-        user['is_authenticated'] = True
+    def signed_in(self, **user):
         user['is_anonymous'] = False
         self.user |= user
 
-    def on_signed_out(self):
-        self.user = {
-            'is_authenticated': False,
-            'is_anonymous': True
-        }
+    def signed_out(self):
+        self.user = {'is_anonymous': True}
