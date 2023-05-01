@@ -27,20 +27,28 @@ class ElementsSelector(object):
     @classmethod
     async def find_any(cls, tree: Wid, matcher_cb, timeout=None):
         now = time.time()
-        while cls.is_timed(timeout, now):
+        possible_trials = 3
+        while cls.is_timed(timeout, now) and possible_trials:
+            possible_trials -= 1
             if result := cls.select_element(tree, matcher_cb):
                 return result
             await aio.sleep(1/6)
 
     @classmethod
-    async def find_by_text(cls, tree: Wid, pattern: str, timeout=None):
+    async def find_by_attrib(cls, tree: Wid, attrib: str, value: str, timeout=None):
         def callback(node: Wid):
-            if hasattr(node, 'text'):
-                regex = re.compile(pattern, re.IGNORECASE)
-                return regex.search(node.text)
+            if hasattr(node, attrib):
+                regex = re.compile(value, re.IGNORECASE)
+                og_value = getattr(node, attrib)
+                return regex.search(og_value)
 
         result = await cls.find_any(tree, callback, timeout)
 
+        return result
+
+    @classmethod
+    async def find_by_text(cls, tree: Wid, pattern: str, timeout=None):
+        result = await cls.find_by_attrib(tree, 'text', pattern, timeout)
         return result
 
     @classmethod
