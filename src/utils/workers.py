@@ -69,27 +69,27 @@ class ConfiguratorUnit(SessionUnit):
             await io.sleep(20)
 
 class QueuePosterUnit(ConfiguratorUnit):
-    def post_payload(self, **kwargs):
+    def post_job(self, **job):
         loop = self.loop
         while loop is None:
             loop = self.loop
-        loop.call_soon_threadsafe(self.threadsafe_poster, kwargs)
+        loop.call_soon_threadsafe(self.post_job_safely, job)
 
-    def threadsafe_poster(self, payload: dict[str, tip.Any]):
-        self.loop.create_task(self.poster(**payload))
+    def post_job_safely(self, payload: dict[str, tip.Any]):
+        self.loop.create_task(self.post_in_queue(**payload))
 
-    async def poster(self, **kwargs):
+    async def post_in_queue(self, **kwargs):
         await self.OUTS_Q.put(kwargs)
 
 class ProcessorUnit(QueuePosterUnit):
     ...
 
-class Worker(ConfiguratorUnit):
+class Worker(ProcessorUnit):
     __events__ = (
         'on_signed_in',
         'on_signed_out',
         'on_response',
-        'on_status'
+        'on_status',
     )
 
     def on_signed_in(self, **kwargs):
