@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Add workaround for PyAutoGUI in Linux environments.">
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update CD actions to fix PyAutoGUI issue">
       <change beforePath="$PROJECT_DIR$/.github/workflows/specs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/specs.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -72,20 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680253819654</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Move and update workers.py">
-      <created>1681074514621</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074514621</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Refactor app gui logic">
-      <created>1681074712586</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074712586</updated>
     </task>
     <task id="LOCAL-00021" summary="Rename module">
       <created>1681074763662</created>
@@ -416,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683015817708</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683016897534</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1683016897534</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683017081773</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1683017081773</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,7 +431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Add a threshold trial count while searching for an element" />
     <MESSAGE value="Update views" />
     <MESSAGE value="Add test units for logon page" />
@@ -456,6 +455,7 @@
     <MESSAGE value="Add app pages screenshots" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Add workaround for PyAutoGUI in Linux environments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add workaround for PyAutoGUI in Linux environments." />
+    <MESSAGE value="Update CD actions to fix PyAutoGUI issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CD actions to fix PyAutoGUI issue" />
   </component>
 </project>
