@@ -23,7 +23,7 @@ jobs:
           pip install --no-cache-dir -r requirements.txt
       - name: Install Additional Linux Dependencies
         run: |
-          sudo apt-get -y install scrot python3-tk
+          sudo apt-get -y install python3-xlib scrot python3-tk
       - name: Run Tests
         run: |
           python -m pytest --disable-warnings
