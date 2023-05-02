@@ -24,8 +24,7 @@ jobs:
       - name: Install Additional Linux Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y scrot python-tk
-          xhost +SI:localuser:root
+          sudo apt-get install -y scrot python3-tk
           sudo xkeysnail config.py
       - name: Run Tests
         run: |
