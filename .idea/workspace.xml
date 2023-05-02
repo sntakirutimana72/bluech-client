@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Test :half directive">
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocols/app.uix.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/app.uix.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,20 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680253819654</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Update app :main entry file">
-      <created>1680730691431</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730691431</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update .gitignore">
-      <created>1680730701978</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730701978</updated>
     </task>
     <task id="LOCAL-00018" summary="Update workspace.xml">
       <created>1680730716467</created>
@@ -416,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682991525653</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Add app pages screenshots">
+      <created>1683013765267</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1683013765268</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Update README.md">
+      <created>1683013782282</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1683013782282</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,8 +431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add a RingSpin element" />
-    <MESSAGE value="Delete old fields context file" />
     <MESSAGE value="Reduce and update common shared components" />
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Add a threshold trial count while searching for an element" />
@@ -456,6 +454,8 @@
     <MESSAGE value="Update GUI unittest abstract" />
     <MESSAGE value="Test simulated behavioral reflexes of GUI logic to server responses." />
     <MESSAGE value="Test :half directive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test :half directive" />
+    <MESSAGE value="Add app pages screenshots" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
 </project>

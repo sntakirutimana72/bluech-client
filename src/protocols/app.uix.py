@@ -2,6 +2,10 @@ __name__ = 'bluech_client.protocols.startup.uix'
 
 import sys
 import os
+import platform
+
+if platform.system() == 'Linux':
+    os.environ['DISPLAY'] = ':0'
 
 def configure_framework_logging_system():
     """
