@@ -17,7 +17,7 @@
             FloatLayout:
                 StatWidget:
                     size_hint: None, None
-                    center: self.parent.center_x, self.parent.top - self.height
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                     size: dp(80), dp(80)
                     id: anim_anchor
 
@@ -27,7 +27,7 @@
 
     LogonForm:
         id: logon
-        center: root.center
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
         size_hint: None, None
         size: dp(260), self.minimum_height
         on_submit: root.on_submit()
