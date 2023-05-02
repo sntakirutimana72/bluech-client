@@ -1,8 +1,19 @@
 #:import PrimaryButton src.templates.buttons.PrimaryButton
 #:import Box src.templates.layouts.Box
+#:import GUILayout src.templates.layouts.GUILayout
 
 <FormTextInput@TextField+ResizeWidget>:
     height: dp(30)
+
+<FormErrorDisplay>:
+    size_hint_y: None
+    text_size: self.width, None
+    height: self.texture_size[1]
+    padding: '10sp', '8sp'
+    font_size: '13sp'
+    markup: True
+    color: 'orangered'
+    background_color: '#00000020'
 
 <LogonForm>:
     username: usr.__self__
@@ -25,11 +36,14 @@
 
     ResizableSpan:
         font_size: '30sp'
-        padding_y: '10sp'
         text: root.title
         valign: 'middle'
         halign: 'center'
         markup: True
+    BoxLayout:
+        id: errors_container
+        size_hint_y: None
+        height: self.minimum_height
     FormTextInput:
         id: usr
         name: 'username'
