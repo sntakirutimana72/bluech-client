@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update CD actions to fix PyAutoGUI issue" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update CD actions to fix PyAutoGUI issue">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/specs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/specs.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
