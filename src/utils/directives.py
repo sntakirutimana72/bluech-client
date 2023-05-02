@@ -20,3 +20,6 @@ class StaticSRCLoader:
     def image(cls, stem: str, suffix='png'):
         full_path = cls.images_path() / f'{stem}.{suffix}'
         return str(full_path)
+
+def half(whole_num: int | float):
+    return whole_num * 0.5
