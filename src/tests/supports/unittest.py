@@ -1,5 +1,6 @@
 from kivy.tests import GraphicUnitTest
 from kivy.base import EventLoop
+from kivy.uix.widget import Widget
 
 from .selectors import ElementsSelector
 from ...app import BluechClientApp
@@ -32,4 +33,9 @@ class GUISpec(ElementsSelector):
         self.window = EventLoop.window
 
 class GUnittest(GUISpec, GraphicUnitTest):
-    ...
+    @staticmethod
+    def dispatch(elem: Widget, event: str):
+        elem.dispatch(event)
+
+    def click(self, elem: Widget):
+        self.dispatch(elem, 'on_press')
