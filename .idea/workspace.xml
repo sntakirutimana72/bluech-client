@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Add test units for logon page">
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Reformat common elements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/kv/views.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/views.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/supports/unittest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/supports/unittest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_logon.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test_logon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/directives.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/directives.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,76 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680253819654</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Update workspace dictionary">
-      <created>1680300348330</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300348330</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update workspace.xml from .idea">
-      <created>1680300374494</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300374494</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add base dependencies">
-      <created>1680300410332</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300410332</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add primary configurations for editor, git &amp; linter">
-      <created>1680300438235</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300438235</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Update the README.md file">
-      <created>1680300454402</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300454402</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Create app base skeleton stage 1">
-      <created>1680316411505</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680316411505</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Update .editorconfig">
-      <created>1680730223936</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730223936</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Move guix elements">
-      <created>1680730300514</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730300514</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Create a dynamic import mechanism">
-      <created>1680730339192</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730339192</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Refactor startup protocol">
-      <created>1680730536797</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730536797</updated>
     </task>
     <task id="LOCAL-00011" summary="Refactor startup protocol">
       <created>1680730551667</created>
@@ -394,7 +329,98 @@
       <option name="project" value="LOCAL" />
       <updated>1682917336290</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Remove unnecessary files and rename behaviours.py">
+      <created>1682925337520</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1682925337520</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add git CD actions for test units">
+      <created>1682925393974</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1682925393974</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Add endpoint protocols">
+      <created>1682932084643</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932084643</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Reformat user interface and rename app methods">
+      <created>1682932153741</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932153742</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Remove mocks directory">
+      <created>1682932185970</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932185970</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Remove unused lines of codes">
+      <created>1682932216627</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932216627</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Reformat :post_submit to be flexible">
+      <created>1682932247663</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932247663</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Update logon view's logic">
+      <created>1682932304660</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932304660</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Rename worker QueuePosterUnit methods">
+      <created>1682932346881</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932346881</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add static jobs' maker class">
+      <created>1682932376468</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932376468</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Remove unnecessary buggy codes">
+      <created>1682990610496</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1682990610497</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Create form error display component">
+      <created>1682990639894</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1682990639894</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Reformat common elements">
+      <created>1682990706460</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1682990706460</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,19 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rename log file naming logic" />
-    <MESSAGE value="Introduce kivy garden and utils.rgba" />
-    <MESSAGE value="Add new vocabularies to project workspace.xml" />
-    <MESSAGE value="Perfect index page loading animation" />
-    <MESSAGE value="Update workspace.xml" />
-    <MESSAGE value="Add server mock test support" />
-    <MESSAGE value="Add execution blocks test support" />
-    <MESSAGE value="Add widget selectors test support" />
-    <MESSAGE value="Add custom GUI unittest test support" />
-    <MESSAGE value="Add test support additional utilities" />
-    <MESSAGE value="Initiate test global env in conftest" />
-    <MESSAGE value="Add test units for app" />
-    <MESSAGE value="Add test units for index page" />
     <MESSAGE value="Eliminate __events__ attribute duplication from View" />
     <MESSAGE value="Change CRLF to LF" />
     <MESSAGE value="Move certain design from /behaviors back in /templates" />
@@ -434,6 +447,19 @@
     <MESSAGE value="Add a threshold trial count while searching for an element" />
     <MESSAGE value="Update views" />
     <MESSAGE value="Add test units for logon page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test units for logon page" />
+    <MESSAGE value="Remove unnecessary files and rename behaviours.py" />
+    <MESSAGE value="Add git CD actions for test units" />
+    <MESSAGE value="Add endpoint protocols" />
+    <MESSAGE value="Reformat user interface and rename app methods" />
+    <MESSAGE value="Remove mocks directory" />
+    <MESSAGE value="Remove unused lines of codes" />
+    <MESSAGE value="Reformat :post_submit to be flexible" />
+    <MESSAGE value="Update logon view's logic" />
+    <MESSAGE value="Rename worker QueuePosterUnit methods" />
+    <MESSAGE value="Add static jobs' maker class" />
+    <MESSAGE value="Remove unnecessary buggy codes" />
+    <MESSAGE value="Create form error display component" />
+    <MESSAGE value="Reformat common elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat common elements" />
   </component>
 </project>
