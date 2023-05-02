@@ -19,7 +19,7 @@ class LogonForm(Grid):
     password: TextField = ObjectProperty()
     submit_btn: PrimaryButton = ObjectProperty()
     errors = StringProperty('')
-    title = StringProperty('[i][font=Comic]b[color=#0cf]lue[/color]ch[/font][/i] [b]Logon[/b]')
+    title = StringProperty('[i]b[color=#0cf]lue[/color]ch[/i] [b]Logon[/b]')
 
     def pre_submit(self):
         self.flag_form(True)
