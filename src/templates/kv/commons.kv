@@ -1,6 +1,7 @@
 #:import rgba kivy.utils.rgba
 
 #:import static src.utils.directives.StaticSRCLoader
+#:import half src.utils.directives.half
 
 <ResizeWidget@Widget>:
     size_hint_y: None
@@ -10,18 +11,18 @@
     height: self.texture_size[1]
 
 <SepHLine@Widget>:
-    line_color: '#e8e8e860'
     canvas:
         Color:
             rgba: rgba(root.line_color)
         SmoothLine:
             points: self.x, self.center_y, self.right, self.center_y
+    line_color: '#e8e8e860'
 
 <Circle@Widget>:
-    color: '#e8e8e860'
-    radius: min(*self.size) * 1/4
     canvas:
         Color:
             rgba: rgba(root.color)
         Line:
             circle: (*self.center, root.radius)
+    color: '#e8e8e860'
+    radius: min(*self.size) * 1/5
