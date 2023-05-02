@@ -31,7 +31,14 @@ def configure_app_window_on_startup():
     """
     apply new kivy app window custom configuration
     """
-    import pyautogui as gui
+    try:
+        import pyautogui as gui
+    except KeyError:
+        class PyAutoGUI:
+            @staticmethod
+            def size():
+                return 800, 600
+        gui = PyAutoGUI
 
     from kivy.config import Config
 
