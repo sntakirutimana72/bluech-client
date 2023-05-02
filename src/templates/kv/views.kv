@@ -1,8 +1,5 @@
-#:import rgba kivy.utils.rgba
-#:import GLayout src.templates.behaviors.layouts.GLayout
-
 <IndexPage>:
-    animation_anchor: animation_anchor.__self__
+    anchor: anim_anchor.__self__
 
     FloatLayout:
         BoxLayout:
@@ -20,36 +17,24 @@
             FloatLayout:
                 StatWidget:
                     size_hint: None, None
-                    center: self.parent.center_x, self.parent.top - self.height
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                     size: dp(80), dp(80)
-                    id: animation_anchor
+                    id: anim_anchor
 
 
 <LogonPage>:
-    GLayout:
-        cols: 1
-        spacing: '10sp'
-        padding: '30sp', '20sp'
-        center: root.center_x, root.center_y + 60
-        size_hint: None, None
-        size: dp(300), self.minimum_height
-        background_color: rgba('#0d1874ff')
+    form: logon.__self__
 
-        ResizableSpan:
-            font_size: '40sp'
-            text: root.title
-        TextField:
-            hint_text: 'Username | Email'
-        TextField:
-            hint_text: 'Password'
-            password: True
-        PrimaryButton:
-            text: 'Signin'
+    LogonForm:
+        id: logon
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: None, None
+        size: dp(260), self.minimum_height
+        on_submit: root.on_submit()
 
 
 <Dashboard>:
     manager: pages_manager.__self__
-
     padding: '1sp'
     spacing: '1sp'
     orientation: 'vertical'
@@ -57,7 +42,6 @@
     PagesManager:
         id: pages_manager
         root: root
-
         background_color: 0, 0, .15, 1
         padding: '5sp'
         spacing: '5sp'

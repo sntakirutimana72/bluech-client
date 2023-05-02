@@ -4,6 +4,24 @@
 The idea is to support media attachments, video & audio calls, text messages, and continuous notifications through its built-in push notification features.
 Currently, it only supports text messaging and one-on-one single threaded user chat.
 
+<table>
+  <thead>
+    <tr>
+      <th>Index-offline</th>
+      <th>Index-connecting</th>
+      <th>Index-online</th>
+      <th>Logon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="docs/screenshots/index-offline.png" /></td>
+      <td><img src="docs/screenshots/index-connecting.png" /></td>
+      <td><img src="docs/screenshots/index-online.png" /></td>
+      <td><img src="docs/screenshots/logon.png" /></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Technologies
 

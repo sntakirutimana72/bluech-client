@@ -1,0 +1,32 @@
+<TextField>:
+    canvas.before:
+        Color:
+            rgba: self.border_color
+        RoundedRectangle:
+            radius: self.border_radius
+            pos: self.pos
+            size: self.size
+    canvas:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            radius: self.border_radius
+            pos: self.x + self.border, self.y + self.border
+            size: self.width - self.border * 2, self.height - self.border * 2
+
+    prompt: prompt.__self__
+
+    TextInput:
+        id: prompt
+        background_color: 0, 0, 0, 0
+        font_size: root.font_size
+        font_name: root.font_name
+        foreground_color: root.font_color
+        cursor_color: root.cursor_color
+        background_active: ''
+        background_normal: ''
+        background_disabled_normal: ''
+        hint_text: root.placeholder
+        hint_text_color: root.placeholder_color
+        on_text: root.on_text_change(args[1])
+        on_focus: root.on_focus_change(args[1])

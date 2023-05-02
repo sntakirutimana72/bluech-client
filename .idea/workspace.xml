@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update workspace.xml">
-      <change afterPath="$PROJECT_DIR$/src/utils/directives.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/cfg_getter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/cfg_getter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/require.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/require.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/workers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocols/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocols/app.uix.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/app.uix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/displays/rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/displays/rooms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/shortcuts/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/shortcuts/directives.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/views.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/views.py" afterDir="false" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update CD actions to fix PyAutoGUI issue">
+      <change beforePath="$PROJECT_DIR$/src/templates/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/forms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,20 +45,22 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Projects/bluech-client&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Projects/bluech-client/src/templates&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.EditorConfig&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Projects\bluech-client\src\templates" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\tests\supports\mocks" />
       <recent name="D:\GitHub\Projects\bluech-client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Projects\bluech-client\docs\screenshots" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\templates\behaviors" />
       <recent name="D:\GitHub\Projects\bluech-client\src\templates" />
+      <recent name="D:\GitHub\Projects\bluech-client\src\tests\supports" />
       <recent name="D:\GitHub\Projects\bluech-client\src\helpers" />
-      <recent name="D:\GitHub\Projects\bluech-client\src\templates\kv" />
-      <recent name="D:\GitHub\Projects\bluech-client\src" />
-      <recent name="D:\GitHub\Projects\bluech-client\src\views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,174 +71,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680253819654</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Update workspace dictionary">
-      <created>1680300348330</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300348330</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update workspace.xml from .idea">
-      <created>1680300374494</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300374494</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add base dependencies">
-      <created>1680300410332</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300410332</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add primary configurations for editor, git &amp; linter">
-      <created>1680300438235</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300438235</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Update the README.md file">
-      <created>1680300454402</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1680300454402</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Create app base skeleton stage 1">
-      <created>1680316411505</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680316411505</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Update .editorconfig">
-      <created>1680730223936</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730223936</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Move guix elements">
-      <created>1680730300514</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730300514</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Create a dynamic import mechanism">
-      <created>1680730339192</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730339192</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Refactor startup protocol">
-      <created>1680730536797</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730536797</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Refactor startup protocol">
-      <created>1680730551667</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730551667</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Add :DYNAMIC_IMPORTS to settings">
-      <created>1680730592085</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730592085</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Refactor views dynamic and logic">
-      <created>1680730625399</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730625399</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Update worker core engine">
-      <created>1680730647195</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730647195</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Update logger logic">
-      <created>1680730666837</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730666837</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Update app :main entry file">
-      <created>1680730691431</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730691431</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update .gitignore">
-      <created>1680730701978</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730701978</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Update workspace.xml">
-      <created>1680730716467</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730716467</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Move and update workers.py">
-      <created>1681074514621</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074514621</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Refactor app gui logic">
-      <created>1681074712586</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074712586</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Rename module">
-      <created>1681074763662</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074763662</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Rename log file naming logic">
-      <created>1681074808118</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074808118</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Introduce kivy garden and utils.rgba">
-      <created>1681074838851</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074838851</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Add new vocabularies to project workspace.xml">
-      <created>1681074871485</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1681074871485</updated>
     </task>
     <task id="LOCAL-00025" summary="Perfect index page loading animation">
       <created>1681306988910</created>
@@ -269,7 +86,336 @@
       <option name="project" value="LOCAL" />
       <updated>1681307003609</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add server mock test support">
+      <created>1682585623187</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585623187</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add execution blocks test support">
+      <created>1682585660127</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585660127</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add widget selectors test support">
+      <created>1682585677423</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585677423</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add custom GUI unittest test support">
+      <created>1682585705900</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585705900</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add test support additional utilities">
+      <created>1682585728551</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585728551</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Initiate test global env in conftest">
+      <created>1682585764754</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585764754</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add test units for app">
+      <created>1682585786883</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585786883</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add test units for index page">
+      <created>1682585798966</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585798966</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Eliminate __events__ attribute duplication from View">
+      <created>1682585896553</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585896553</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Change CRLF to LF">
+      <created>1682585957801</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1682585957801</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Move certain design from /behaviors back in /templates">
+      <created>1682917013071</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917013071</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add logon form">
+      <created>1682917067479</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917067479</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Reformat :TextField">
+      <created>1682917105595</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917105595</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Add a RingSpin element">
+      <created>1682917123848</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917123848</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Delete old fields context file">
+      <created>1682917162211</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917162211</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Reduce and update common shared components">
+      <created>1682917199837</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917199837</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Update .gitignore">
+      <created>1682917215180</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917215180</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Add a threshold trial count while searching for an element">
+      <created>1682917280065</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917280065</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Update views">
+      <created>1682917306000</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917306000</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Add test units for logon page">
+      <created>1682917336290</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1682917336290</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Remove unnecessary files and rename behaviours.py">
+      <created>1682925337520</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1682925337520</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add git CD actions for test units">
+      <created>1682925393974</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1682925393974</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Add endpoint protocols">
+      <created>1682932084643</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932084643</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Reformat user interface and rename app methods">
+      <created>1682932153741</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932153742</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Remove mocks directory">
+      <created>1682932185970</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932185970</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Remove unused lines of codes">
+      <created>1682932216627</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932216627</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Reformat :post_submit to be flexible">
+      <created>1682932247663</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932247663</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Update logon view's logic">
+      <created>1682932304660</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932304660</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Rename worker QueuePosterUnit methods">
+      <created>1682932346881</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932346881</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add static jobs' maker class">
+      <created>1682932376468</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1682932376468</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Remove unnecessary buggy codes">
+      <created>1682990610496</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1682990610497</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Create form error display component">
+      <created>1682990639894</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1682990639894</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Reformat common elements">
+      <created>1682990706460</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1682990706460</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Replace naive pos logic with efficient one">
+      <created>1682991313880</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1682991313880</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Add the :half directive">
+      <created>1682991333566</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1682991333566</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Update GUI unittest abstract">
+      <created>1682991376155</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1682991376155</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Test simulated behavioral reflexes of GUI logic to server responses.">
+      <created>1682991501982</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1682991501982</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Test :half directive">
+      <created>1682991525653</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1682991525653</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Add app pages screenshots">
+      <created>1683013765267</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1683013765268</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Update README.md">
+      <created>1683013782282</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1683013782282</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Add workaround for PyAutoGUI in Linux environments.">
+      <created>1683015817708</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1683015817708</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683016897534</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1683016897534</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683017081773</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1683017081773</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683017743210</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1683017743210</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683017940048</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1683017940048</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683019973491</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1683019973491</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Update CD actions to fix PyAutoGUI issue">
+      <created>1683020489469</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1683020489469</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,30 +430,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update workspace dictionary" />
-    <MESSAGE value="Update workspace.xml from .idea" />
-    <MESSAGE value="Add base dependencies" />
-    <MESSAGE value="Add primary configurations for editor, git &amp; linter" />
-    <MESSAGE value="Update the README.md file" />
-    <MESSAGE value="Create app base skeleton stage 1" />
-    <MESSAGE value="Update .editorconfig" />
-    <MESSAGE value="Move guix elements" />
-    <MESSAGE value="Create a dynamic import mechanism" />
-    <MESSAGE value="Refactor startup protocol" />
-    <MESSAGE value="Add :DYNAMIC_IMPORTS to settings" />
-    <MESSAGE value="Refactor views dynamic and logic" />
-    <MESSAGE value="Update worker core engine" />
-    <MESSAGE value="Update logger logic" />
-    <MESSAGE value="Update app :main entry file" />
-    <MESSAGE value="Update .gitignore" />
-    <MESSAGE value="Move and update workers.py" />
-    <MESSAGE value="Refactor app gui logic" />
-    <MESSAGE value="Rename module" />
-    <MESSAGE value="Rename log file naming logic" />
-    <MESSAGE value="Introduce kivy garden and utils.rgba" />
-    <MESSAGE value="Add new vocabularies to project workspace.xml" />
-    <MESSAGE value="Perfect index page loading animation" />
-    <MESSAGE value="Update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
+    <MESSAGE value="Add a threshold trial count while searching for an element" />
+    <MESSAGE value="Update views" />
+    <MESSAGE value="Add test units for logon page" />
+    <MESSAGE value="Remove unnecessary files and rename behaviours.py" />
+    <MESSAGE value="Add git CD actions for test units" />
+    <MESSAGE value="Add endpoint protocols" />
+    <MESSAGE value="Reformat user interface and rename app methods" />
+    <MESSAGE value="Remove mocks directory" />
+    <MESSAGE value="Remove unused lines of codes" />
+    <MESSAGE value="Reformat :post_submit to be flexible" />
+    <MESSAGE value="Update logon view's logic" />
+    <MESSAGE value="Rename worker QueuePosterUnit methods" />
+    <MESSAGE value="Add static jobs' maker class" />
+    <MESSAGE value="Remove unnecessary buggy codes" />
+    <MESSAGE value="Create form error display component" />
+    <MESSAGE value="Reformat common elements" />
+    <MESSAGE value="Replace naive pos logic with efficient one" />
+    <MESSAGE value="Add the :half directive" />
+    <MESSAGE value="Update GUI unittest abstract" />
+    <MESSAGE value="Test simulated behavioral reflexes of GUI logic to server responses." />
+    <MESSAGE value="Test :half directive" />
+    <MESSAGE value="Add app pages screenshots" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Add workaround for PyAutoGUI in Linux environments." />
+    <MESSAGE value="Update CD actions to fix PyAutoGUI issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CD actions to fix PyAutoGUI issue" />
   </component>
 </project>

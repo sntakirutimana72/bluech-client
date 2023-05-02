@@ -13,3 +13,8 @@ STATIC_PATH = BASE_DIR / 'src' / 'static'
 COMMON_KV_TEMPLATES = (
     'commons',
 )
+
+ENDPOINT_PROTOCOLS = {
+    'signin': 'signin',
+    'signout': 'signout',
+}
