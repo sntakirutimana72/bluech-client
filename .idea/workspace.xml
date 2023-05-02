@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update README.md">
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Add workaround for PyAutoGUI in Linux environments.">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/specs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/specs.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocols/app.uix.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/app.uix.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680253819654</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Update workspace.xml">
-      <created>1680730716467</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1680730716467</updated>
     </task>
     <task id="LOCAL-00019" summary="Move and update workers.py">
       <created>1681074514621</created>
@@ -416,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683013782282</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Add workaround for PyAutoGUI in Linux environments.">
+      <created>1683015817708</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1683015817708</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,7 +431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reduce and update common shared components" />
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Add a threshold trial count while searching for an element" />
     <MESSAGE value="Update views" />
@@ -456,6 +455,7 @@
     <MESSAGE value="Test :half directive" />
     <MESSAGE value="Add app pages screenshots" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Add workaround for PyAutoGUI in Linux environments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add workaround for PyAutoGUI in Linux environments." />
   </component>
 </project>
