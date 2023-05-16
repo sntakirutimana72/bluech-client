@@ -1,5 +1,4 @@
 from .supports.unittest import GUnittest
-from .supports.blocks import async_exc
 from ..templates.forms import LogonForm
 
 class LogonTestCases(GUnittest):

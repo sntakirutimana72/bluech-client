@@ -32,14 +32,14 @@
             size_hint_x: None
             width: self.parent.height
             center: self.parent.center
-            source: static.image('online')
+            source: static_img('online')
 
     ResizableSpan:
-        font_size: '30sp'
+        font_size: '24sp'
         text: root.title
         valign: 'middle'
         halign: 'center'
-        markup: True
+        font_name: resource('fonts:DeliusUnicase')
     BoxLayout:
         id: errors_container
         size_hint_y: None

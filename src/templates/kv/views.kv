@@ -1,38 +1,3 @@
-<IndexPage>:
-    anchor: anim_anchor.__self__
-
-    FloatLayout:
-        BoxLayout:
-            padding: '10sp'
-            orientation: 'vertical'
-
-            FloatLayout:
-                Label:
-                    text: '[size=68][color=#a5ff00]bluech[/color][/size] [i]Client[/i]'
-                    font_size: '42sp'
-                    markup: True
-                    pos: self.parent.pos
-                    size_hint_y: None
-                    height: self.texture_size[1]
-            FloatLayout:
-                StatWidget:
-                    size_hint: None, None
-                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                    size: dp(80), dp(80)
-                    id: anim_anchor
-
-
-<LogonPage>:
-    form: logon.__self__
-
-    LogonForm:
-        id: logon
-        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-        size_hint: None, None
-        size: dp(260), self.minimum_height
-        on_submit: root.on_submit()
-
-
 <Dashboard>:
     manager: pages_manager.__self__
     padding: '1sp'
@@ -42,10 +7,9 @@
     PagesManager:
         id: pages_manager
         root: root
-        background_color: 0, 0, .15, 1
         padding: '5sp'
         spacing: '5sp'
 
-        IndexPage:
+        Index:
             root: root
             app: app

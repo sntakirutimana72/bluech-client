@@ -3,11 +3,12 @@ from kivy.base import EventLoop
 from kivy.uix.widget import Widget
 
 from .selectors import ElementsSelector
-from ...app import BluechClientApp
-from ...templates.views import Page, PagesManager, Dashboard
+from ...app import BluechApp as App
+from ...templates.views.shared import Page
+from ...templates.views.dashboard import PagesManager, Dashboard
 
 class GUISpec(ElementsSelector):
-    app: BluechClientApp
+    app: App
     manager: PagesManager
     root: Dashboard
     current_page: Page
@@ -27,7 +28,7 @@ class GUISpec(ElementsSelector):
         return manager.get_screen(manager.current)
 
     def build(self):
-        self.app = app = BluechClientApp()
+        self.app = app = App()
         app.run()
         EventLoop.ensure_window()
         self.window = EventLoop.window

@@ -5,7 +5,7 @@ from .supports.unittest import GUnittest
 class IndexTestCases(GUnittest):
     def test_display_label(self):
         self.build()
-        with async_exc(self.find_by_text, self.current_page, r'bluech.+client') as element:
+        with async_exc(self.find_by_text, self.current_page, r'blue+.') as element:
             self.assertIsNotNone(element)
 
     def test_has_stat_element(self):
