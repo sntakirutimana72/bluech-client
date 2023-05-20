@@ -13,10 +13,10 @@ if __name__ == '__main__':
     configure_app_window_on_startup()
     Logger.info('Startup protocol engaged successfully.')
 
-    from src.app import BluechClientApp
+    from src.app import BluechApp as App
 
     try:
-        BluechClientApp().run()
+        App().run()
     except:
         Logger.error()
     Logger.info('Application closed')

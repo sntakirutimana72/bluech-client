@@ -2,7 +2,7 @@ import datetime as dt
 import logging
 import traceback as trace
 
-from ..settings import BASE_DIR
+from ..settings import TEMP_APPDATA_PATH
 
 class Logger:
     logger: logging.Logger
@@ -11,7 +11,7 @@ class Logger:
     def setup_logger(cls):
         logfile_name = dt.datetime.now().strftime('%m_%Y')
         logging.basicConfig(
-            filename=BASE_DIR.joinpath('res', 'logs', f'{logfile_name}.log'),
+            filename=TEMP_APPDATA_PATH.joinpath('logs', f'{logfile_name}.log'),
             format='%(asctime)s :: %(levelname)s :: %(name)s :: %(message)s')
         cls.logger = logging.getLogger('bluech-client')
         cls.logger.setLevel(logging.DEBUG)

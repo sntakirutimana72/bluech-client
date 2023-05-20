@@ -1,0 +1,63 @@
+<Index>:
+    anchor: anim_anchor.__self__
+
+    FloatLayout:
+        BoxLayout:
+            padding: '10sp'
+            orientation: 'vertical'
+
+            FloatLayout:
+                ResizableSpan:
+                    text: '[b][color=#90ffc3]blue[/color]ch[/b]'
+                    font_size: '60sp'
+                    halign: 'center'
+                    pos_hint: {'center_x': .5, 'y': 0}
+                    font_name: resource('fonts:DeliusUnicase')
+            FloatLayout:
+                StatWidget:
+                    size_hint: None, None
+                    pos_hint: {'center_x': .5, 'top': .9}
+                    size: dp(80), dp(80)
+                    id: anim_anchor
+
+
+<Logon>:
+    form: logon.__self__
+
+    LogonForm:
+        id: logon
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        size_hint: None, None
+        size: dp(260), self.minimum_height
+        on_submit: root.on_submit()
+
+
+<Welcome>:
+    GridLayout:
+        pos_hint: {'center_x': .5, 'center_y': .6}
+        size_hint: .75, None
+        spacing: '25sp'
+        cols: 1
+        height: self.minimum_height
+
+        ResizableSpan:
+            text: root.message.format(root.app.user['nickname'])
+            font_size: '28sp'
+            halign: 'center'
+        BoxLayout:
+            size_hint_y: None
+            height: '20sp'
+
+            FloatLayout:
+                BoxLayout:
+                    size_hint_x: None
+                    spacing: '10sp'
+                    width: self.minimum_width
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+
+                    ResizableXSpan:
+                        text: 'Getting things ready'
+                        valign: 'middle'
+                    RingSpin:
+                        id: prog_ele
+                        cover_color: '#0e1574ff'

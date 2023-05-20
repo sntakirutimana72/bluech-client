@@ -2,7 +2,7 @@ import pathlib as plib
 
 from kivy.lang import Builder
 
-from ..settings import KV_TEMPLATES_DIR, STATIC_PATH
+from ..settings import KV_TEMPLATES_DIR, STATIC_PATH, ASSETS_PATH
 
 def include(py_file_path: str | list[str] | tuple[str]):
     if isinstance(py_file_path, (list, tuple)):
@@ -11,15 +11,24 @@ def include(py_file_path: str | list[str] | tuple[str]):
         kv_name = plib.Path(py_file_path).with_suffix('.kv').name
         Builder.load_file(str(KV_TEMPLATES_DIR.joinpath(kv_name)))
 
-class StaticSRCLoader:
-    @staticmethod
-    def images_path():
-        return STATIC_PATH / 'images'
+def dissect_pattern(pattern: str, scope_path: plib.Path):
+    folder, file = pattern.rsplit(':', 1)
+    res = scope_path.joinpath(*folder.split(':'), file)
+    return res
 
-    @classmethod
-    def image(cls, stem: str, suffix='png'):
-        full_path = cls.images_path() / f'{stem}.{suffix}'
-        return str(full_path)
+def resource(pattern: str):
+    res = dissect_pattern(pattern, ASSETS_PATH)
+    return str(res)
+
+def static(pattern: str):
+    res = dissect_pattern(pattern, STATIC_PATH)
+    return str(res)
+
+def static_img(pattern: str):
+    img = dissect_pattern(f'images:{pattern}', STATIC_PATH)
+    if not img.suffix:
+        img = img.with_suffix('.png')
+    return str(img)
 
 def half(whole_num: int | float):
     return whole_num * 0.5

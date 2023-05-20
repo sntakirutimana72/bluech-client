@@ -10,6 +10,10 @@ KV_TEMPLATES_DIR = BASE_DIR / 'src' / 'templates' / 'kv'
 
 STATIC_PATH = BASE_DIR / 'src' / 'static'
 
+ASSETS_PATH = BASE_DIR / 'assets'
+
+TEMP_APPDATA_PATH = BASE_DIR / 'APPDATA' / 'bluech'
+
 COMMON_KV_TEMPLATES = (
     'commons',
 )
@@ -18,3 +22,5 @@ ENDPOINT_PROTOCOLS = {
     'signin': 'signin',
     'signout': 'signout',
 }
+
+APP_TITLE = 'bluech'

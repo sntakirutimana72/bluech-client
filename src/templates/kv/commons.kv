@@ -1,14 +1,25 @@
 #:import rgba kivy.utils.rgba
 
-#:import static src.utils.directives.StaticSRCLoader
 #:import half src.utils.directives.half
+#:import resource src.utils.directives.resource
+#:import static src.utils.directives.static
+#:import static_img src.utils.directives.static_img
 
 <ResizeWidget@Widget>:
     size_hint_y: None
 
+<ResizeXWidget@Widget>:
+    size_hint_x: None
+
+<ResizableXSpan@Label+ResizeXWidget>:
+    text_size: None, self.height
+    width: self.texture_size[0]
+    markup: True
+
 <ResizableSpan@Label+ResizeWidget>:
     text_size: self.width, None
     height: self.texture_size[1]
+    markup: True
 
 <SepHLine@Widget>:
     canvas:
