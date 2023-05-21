@@ -1,6 +1,6 @@
 import typing as ty
 
-from kivy.properties import ColorProperty, ObjectProperty
+from kivy.properties import ColorProperty, ObjectProperty, DictProperty
 from kivy.uix.screenmanager import ScreenManager
 
 from . import pages
@@ -18,12 +18,17 @@ def get_page(name: str) -> ty.Type[Page] | None:
 class PagesManager(ScreenManager):
     root: View = ObjectProperty()
 
-    def forget_and_switch(self, page: str | Page):
+    def replace_with(self, page: str | Page):
         if isinstance(page, str):
-            page = self.get_new_page(page)
-        forgotten_page = self.current_screen
+            page = self.discover_page(page)
+        old_page = self.current_screen
         self.switch_to(page)
-        self.remove_widget(forgotten_page)
+        self.remove_widget(old_page)
+
+    def discover_page(self, name: str):
+        if name in self.screen_names:
+            return self.get_screen(name)
+        return self.get_new_page(name)
 
     def get_new_page(self, name: str) -> Page:
         options = {'root': self.root, 'app': self.root.app}
@@ -37,17 +42,31 @@ class Dashboard(View, Box):
     __worker_events__ = 'on_signed_out', 'on_response',
 
     manager: PagesManager = ObjectProperty()
+    _tmp_stash = DictProperty({})
     background_color = ColorProperty('#0e1574ff')
 
     def connection_established(self):
-        self.manager.forget_and_switch('logon')
+        self.app.synced = True
+        self.manager.replace_with('logon')
 
     def signed_in(self, user):
         self.app.signed_in(**user)
-        self.manager.forget_and_switch('welcome')
+        self.manager.replace_with('welcome')
+
+    def signing_out(self):
+        self._tmp_stash['BEFORE_LOGOUT_PG'] = self.manager.current_screen
+        self.manager.replace_with('logout')
 
     def on_signed_out(self, **kwargs):
-        self.manager.forget_and_switch('index')
+        status_code = kwargs['status']
+
+        if status_code == 200:
+            del self._tmp_stash['BEFORE_LOGOUT_PG']
+            pg_name = 'logon' if self.app.synced else 'index'
+            self.manager.replace_with(pg_name)
+        else:
+            before_logout_pg = self._tmp_stash.pop('BEFORE_LOGOUT_PG')
+            self.manager.replace_with(before_logout_pg)
 
     def on_response(self, **kwargs):
         ...
