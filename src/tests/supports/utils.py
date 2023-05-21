@@ -28,3 +28,26 @@ def get_cls_name(cls: type):
 def get_instance_cls_name(instance: object):
     cls = get_cls(instance)
     return get_cls_name(cls)
+
+class Mocks:
+    class Users:
+        @staticmethod
+        def regular():
+            return {
+                'email': 'regular@email.test',
+                'nickname': 'regular',
+                'pass_w': '@12345!',
+                'id': 7089
+            }
+
+    class Responses:
+        @staticmethod
+        def signedIn(user=None):
+            if user is None:
+                user = Mocks.Users.regular()
+                del user['pass_w']
+            return {'proto': 'connected', 'user': user}
+
+        @staticmethod
+        def error500(status=400):
+            return {'proto': 'invalid_request', 'message': f'{status}: Invalid Request'}
