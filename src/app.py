@@ -1,10 +1,11 @@
-from kivy.properties import ObjectProperty, DictProperty, OptionProperty
+from kivy.properties import ObjectProperty, DictProperty, OptionProperty, BooleanProperty
 from kivy.app import App
 
 from .settings import COMMON_KV_TEMPLATES, APP_TITLE
 from .templates.views.dashboard import Dashboard
 from .utils.directives import include
 from .utils.workers import Worker
+from .utils.jobs import AuthJobs
 
 class UserContextProvider(App):
     user = DictProperty({
@@ -34,6 +35,9 @@ class ThemeContextProvider(App):
 class BluechApp(UserContextProvider, ThemeContextProvider):
     title = APP_TITLE
 
+    _synced = BooleanProperty()
+    """It holds the status of the endpoints server in global scope throughout the app lifetime."""
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -44,3 +48,16 @@ class BluechApp(UserContextProvider, ThemeContextProvider):
 
     def on_start(self):
         self.worker.ignite()
+
+    def sign_out(self):
+        self.root.signing_out()
+        worker = self.worker
+        worker.post_job_safely(AuthJobs.signout())
+
+    @property
+    def synced(self):
+        return self._synced
+
+    @synced.setter
+    def synced(self, state: bool):
+        self._synced = state
