@@ -1,9 +1,3 @@
-__all__ = (
-    'Index',
-    'Logon',
-    'Welcome',
-)
-
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.animation import Animation
 
@@ -79,10 +73,7 @@ class Logon(Page):
         signin_job = AuthJobs.signin(creds)
         worker.post_job(**signin_job)
 
-class Welcome(Page):
-    name = 'welcome'
-    message = StringProperty('[size=48][i][b]Welcome[/b][/i][/size], [color=#70ffc9]{0}[/color]')
-
+class WithProgElement(Page):
     def on_ids(self, *args):
         if 'prog_ele' in args[1]:
             self.ids.prog_ele.spin()
@@ -90,3 +81,10 @@ class Welcome(Page):
     def on_parent(self, *args):
         if args[1] is None:
             self.ids.prog_ele.halt()
+
+class Welcome(WithProgElement):
+    name = 'welcome'
+    message = StringProperty('[size=48][i][b]Welcome[/b][/i][/size], [color=#70ffc9]{0}[/color]')
+
+class Logout(WithProgElement):
+    name = 'logout'

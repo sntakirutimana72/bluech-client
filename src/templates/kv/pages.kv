@@ -61,3 +61,19 @@
                     RingSpin:
                         id: prog_ele
                         cover_color: '#0e1574ff'
+
+
+<Logout>:
+    BoxLayout:
+        size_hint: None, None
+        spacing: '30sp'
+        size: self.minimum_width, dp(30)
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+        ResizableXSpan:
+            text: 'Logging out'
+            font_size: '28sp'
+            valign: 'middle'
+        RingSpin:
+            id: prog_ele
+            cover_color: '#0e1574ff'
