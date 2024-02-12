@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Update CD actions to fix PyAutoGUI issue">
-      <change beforePath="$PROJECT_DIR$/.idea/bluech-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bluech-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c095bca7-bdc0-4f79-aa31-85ca659691d6" name="Changes" comment="Add test units for Logout component">
+      <change afterPath="$PROJECT_DIR$/src/utils/parsers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/bluech.yml" beforeDir="false" afterPath="$PROJECT_DIR$/assets/themes/bluech.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bluech.ini" beforeDir="false" afterPath="$PROJECT_DIR$/bluech.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocols/app.uix.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocols/app.uix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/behaviors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/behaviors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/kv/buttons.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/buttons.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/kv/commons.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/commons.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/kv/layouts.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/layouts.kv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/kv/pages.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/pages.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/kv/views.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/views.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/kv/views.kv" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/kv/dashboard.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/layouts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/layouts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/views/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/views/dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/views/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/views/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/supports/unittest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/supports/unittest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/supports/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/supports/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/test_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/test_logon.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test_logon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/test_welcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test_welcome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/views/shared.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/views/shared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/cfg_getter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/directives.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/directives.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/formatters.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +51,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/templates/kv/views.kv" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/templates/kv/dashboard.kv" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,14 +64,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Projects/bluech-client/src/templates/views&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/GitHub/Projects/mstulabac",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\Projects\bluech-client\src\templates\views" />

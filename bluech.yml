@@ -1,0 +1,11 @@
+endpoints:
+  main:
+    host: 'localhost'
+    port: 8090
+
+startup:
+  size:
+    - 0.75
+    - 0.8
+  position: 'custom'
+  borderless: 1

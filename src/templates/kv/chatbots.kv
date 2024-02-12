@@ -1,0 +1,62 @@
+#:import Icon src.templates.layouts.Icon
+
+<BotUser>:
+    spacing: '5sp'
+    padding: '10sp'
+    size_hint_y: None
+    height: dp(44)
+
+    Icon:
+        name: 'online.png'
+        is_circular: True
+        size_hint_x: None
+        width: self.height
+    ResizableSpan:
+        id: nickname
+        shorten: True
+        shorten_from: 'right'
+        text: root.user['nickname']
+
+
+<BotsUsers>:
+    cols: 1
+    spacing: '2sp'
+
+    ResizableSpan:
+        text: '[b]All Users[/b] ([i][b]{0}[/b][/i])'.format(len(users_list.children))
+        font_size: '24sp'
+        halign: 'center'
+        padding_y: '8sp'
+    SepHLine:
+        size_hint_y: None
+        height: dp(2)
+        line_color: '#0e1574ff'
+    ScrollView:
+        GridLayout:
+            id: users_list
+            cols: 1
+            spacing: '4sp'
+            padding: '6sp' if self.children else 0
+            size_hint_y: None
+            height: self.minimum_height
+
+            BotUser:
+                chat_bots: root.root
+                user: {'email': '', 'nickname': 'TEST_BOT_USERNAME', 'id': 1}
+            BotUser:
+                chat_bots: root.root
+                user: {'email': '', 'nickname': 'TEST_BOT_NICKNAME', 'id': 2}
+
+
+<ChatBots>:
+    users: users.__self__
+    manager: rooms.__self__
+
+    BoxLayout:
+        BotsUsers:
+            id: users
+            root: root
+            size_hint_x: .33
+        BotsManager:
+            id: rooms
+            root: root

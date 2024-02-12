@@ -32,3 +32,9 @@ def static_img(pattern: str):
 
 def half(whole_num: int | float):
     return whole_num * 0.5
+
+def double(og_value: int | float):
+    return og_value * 2
+
+def flat(og_value, times: int = 2):
+    return (og_value,) * times

@@ -1,20 +1,24 @@
-from kivy.properties import ObjectProperty, StringProperty
+from kivy.properties import ObjectProperty, StringProperty, DictProperty
 from kivy.animation import Animation
+from kivy.uix.stacklayout import StackLayout
+from kivy.uix.screenmanager import Screen
 
 from .shared import Page
 from ..progress_elements import StatWidget
 from ..forms import LogonForm
+from ..fields import TextAreaField
 from ...utils.workers import Worker
 from ...utils.jobs import AuthJobs
 from ...utils.directives import include
+from ...types import UserInterfaceType
 
 include(__file__)
 
 class Index(Page):
-    __worker_events__ = 'on_status',
+    observables = ('on_status',)
 
-    animation = None
     name = 'index'
+    animation = None
     anchor: StatWidget = ObjectProperty()
 
     def on_parent(self, *args):
@@ -52,7 +56,7 @@ class Index(Page):
             anchor.animation_angle = anchor.animation_cover_angle = 0
 
 class Logon(Page):
-    __worker_events__ = 'on_signed_in',
+    observables = ('on_signed_in',)
 
     name = 'logon'
     form: LogonForm | None = ObjectProperty(allownone=True)
@@ -88,3 +92,13 @@ class Welcome(WithProgElement):
 
 class Logout(WithProgElement):
     name = 'logout'
+
+class BotMessagesDisplay(StackLayout):
+    ...
+
+class Bot(Screen):
+    owner: UserInterfaceType = DictProperty({})
+    partner: UserInterfaceType = DictProperty({})
+
+    message_field: TextAreaField = ObjectProperty()
+    messages_display: BotMessagesDisplay = ObjectProperty()

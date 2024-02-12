@@ -1,6 +1,6 @@
 from kivy.properties import (
     NumericProperty, StringProperty, ColorProperty, ListProperty,
-    ObjectProperty,
+    ObjectProperty, BooleanProperty,
 )
 from kivy.uix.boxlayout import BoxLayout
 
@@ -10,6 +10,8 @@ include(__file__)
 
 class TextField(BoxLayout):
     __events__ = 'on_change', 'on_blur',
+
+    observables = None
 
     font_size = NumericProperty('14sp')
     font_name = StringProperty('Roboto')
@@ -27,6 +29,7 @@ class TextField(BoxLayout):
     border_color = ColorProperty('blue')
     border_blur_color = ColorProperty('green')
     background_color = ColorProperty('#e8e8e8cc')
+
     prompt = ObjectProperty()
 
     def on_change(self, new_val: str):
@@ -48,6 +51,15 @@ class TextField(BoxLayout):
     def on_focus_change(self, new_focus: bool):
         self.dispatch('on_blur', new_focus)
 
+    def on_prompt(self, *args):
+        instance = args[1]
+
+        if instance and self.observables:
+            for attrib in self.observables:
+                if hasattr(self, attrib) and hasattr(instance, attrib):
+                    attrib_val = getattr(self, attrib)
+                    setattr(instance, attrib, attrib_val)
+
     @property
     def value(self) -> str:
         return self.prompt.text
@@ -55,3 +67,8 @@ class TextField(BoxLayout):
     @value.setter
     def value(self, new_value: str):
         self.prompt.text = new_value
+
+class TextAreaField(TextField):
+    observables = ('multiline',)
+
+    multiline = BooleanProperty(True)

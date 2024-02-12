@@ -10,21 +10,21 @@ class View(Widget):
     root = ObjectProperty(allownone=True)
 
     def __init__(self, **kwargs):
-        super(View, self).__init__(**kwargs)
-        self.schedule_listeners_registration()
+        super().__init__(**kwargs)
+        self._on_register_observables()
 
-    def schedule_listeners_registration(self, timeout=0.):
-        Clock.schedule_once(lambda _: self.register_listeners(), timeout)
+    def _on_register_observables(self, timeout=0.):
+        Clock.schedule_once(lambda _: self._register_observables(), timeout)
 
-    def register_listeners(self):
+    def _register_observables(self):
         if self.app is None:
-            self.schedule_listeners_registration(timeout=1/4)
-        elif hasattr(self, '__worker_events__'):
+            self._on_register_observables(timeout=1/4)
+        elif hasattr(self, 'observables'):
             worker: Worker = self.app.worker
-            for event_uid in self.__worker_events__:
-                event_handler = getattr(self, event_uid)
-                callback = lambda *_, **kwargs: event_handler(**kwargs)
-                worker.fbind(event_uid, callback)
+            for observable in self.observables:
+                observer = getattr(self, observable)
+                observer_cb = lambda *_, **kwargs: observer(**kwargs)
+                worker.fbind(observable, observer_cb)
 
 class Page(View, Screen):
     ...

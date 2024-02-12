@@ -6,3 +6,13 @@
             radius: root.border_radius
             pos: self.pos
             size: self.size
+
+<Icon>
+    canvas:
+        Color:
+            rgba: root.background_color
+        RoundedRectangle:
+            radius: [half(min(*self.size))] if self.is_circular else self.border
+            pos: self.pos
+            size: self.size
+            source: self.source

@@ -35,27 +35,34 @@ def configure_app_window_on_startup():
 
     from kivy.config import Config
 
-    from src.utils.cfg_getter import cfg_getter
-    from src.utils.logger import Logger
+    from src.settings import BASE_DIR, APP_NAME
+    from src.utils.parsers import YMLParser
+    from src.utils.helpers import with_yml_sfx
 
-    try:
-        def get_configs(*startup_configs):
-            width, height = gui.size()  # System Size
-            ration_w = int(width * .75)
-            ration_h = int(height * .75)
-            left = (width - ration_w) // 2  # X-axis
-            top = (height - ration_h) // 2 - 20  # Y-axis
+    def normalize_pos_size(rx: float, ry: float):
+        sw, sh = gui.size()
+        sx = int(sw * rx)
+        sy = int(sh * ry)
+        x = (sw - sx) // 2
+        y = (sh - sy) // 2 - 20
 
-            yield from [
-                *startup_configs,
-                ('minimum_height', f'{ration_h}'), ('minimum_width', f'{ration_w}'),
-                ('height', f'{ration_h}'), ('width', f'{ration_w}'),
-                ('left', f'{left}'), ('top', f'{top}')
-            ]
+        return (
+            ('height', f'{sy}'),
+            ('width', f'{sx}'),
+            ('left', f'{x}'),
+            ('top', f'{y}')
+        )
 
-        for option, _ in get_configs(*cfg_getter('startup')):
-            Config.set('graphics', option, _)
+    def all_configs():
+        startup_block = parser.block('startup')
+        s_ratios = startup_block.pop('size')
 
-    except:
-        Logger.error()
-        sys.exit(1)
+        yield from (
+            *startup_block.items(),
+            *normalize_pos_size(*s_ratios)
+        )
+
+    parser = YMLParser(BASE_DIR / with_yml_sfx(APP_NAME)).load()
+
+    for option, value in all_configs():
+        Config.set('graphics', option, value)

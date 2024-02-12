@@ -12,9 +12,12 @@ STATIC_PATH = BASE_DIR / 'src' / 'static'
 
 ASSETS_PATH = BASE_DIR / 'assets'
 
+THEMES_PATH = ASSETS_PATH / 'themes'
+
 TEMP_APPDATA_PATH = BASE_DIR / 'APPDATA' / 'bluech'
 
 COMMON_KV_TEMPLATES = (
+    'directives',
     'commons',
 )
 
@@ -23,4 +26,15 @@ ENDPOINT_PROTOCOLS = {
     'signout': 'signout',
 }
 
-APP_TITLE = 'bluech'
+APP_NAME = 'bluech'
+
+APP_TITLE = APP_NAME
+
+DEFAULT_THEME_FILENAME = f'{APP_NAME}.yml'
+
+DEFAULT_THEME = 'white'
+
+THEMES = (
+    DEFAULT_THEME,
+    'dark',
+)

@@ -16,20 +16,28 @@ class Logger:
         cls.logger = logging.getLogger('bluech-client')
         cls.logger.setLevel(logging.DEBUG)
 
+    @staticmethod
+    def raises(message='FALL THROUGH'):
+        raise message
+
     @classmethod
     def info(cls, payload):
         cls.logger.info(str(payload))
+        return cls
 
     @classmethod
     def critical(cls, payload):
         cls.logger.critical(str(payload))
+        return cls
 
     @classmethod
     def warning(cls, payload):
         cls.logger.warning(str(payload))
+        return cls
 
     @classmethod
     def error(cls, payload=None):
         if payload is None:
             payload = trace.format_exc()
         cls.logger.error(str(payload))
+        return cls

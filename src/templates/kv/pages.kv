@@ -1,3 +1,5 @@
+#:import Box src.templates.layouts.Box
+
 <Index>:
     anchor: anim_anchor.__self__
 
@@ -77,3 +79,27 @@
         RingSpin:
             id: prog_ele
             cover_color: '#0e1574ff'
+
+
+<Bot>:
+    message_field: msg_field.__self__
+    messages_display: msg_display.__self__
+
+    Box:
+        orientation: 'vertical'
+        background_color: '#0e1574ff'
+        padding: '5sp'
+        spacing: '5sp'
+
+        ResizableSpan:
+            text: root.partner['nickname']
+        ScrollView:
+            BotMessagesDisplay:
+                size_hint_y: None
+                height: max(self.minimum_height, self.parent.height)
+                id: msg_display
+        TextAreaField:
+            placeholder: 'Enter Message'
+            size_hint_y: None
+            height: dp(40)
+            id: msg_field
